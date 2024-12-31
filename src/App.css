@@ -1,0 +1,96 @@
+.App {
+  font-family: 'Arial', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #1e1e1e; 
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  color: #f1f1f1;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  margin: 0;
+  background-color: #121212; 
+}
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #555;
+  border-radius: 4px;
+  outline: none;
+  background-color: #2c2c2c; 
+  color: #f1f1f1; 
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.result {
+  margin-top: 20px;
+  text-align: left;
+  background-color: #2c2c2c;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.result h3 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.result h4 {
+  margin-bottom: 0.5rem;
+  color: #dddddd;
+}
+
+.result ul {
+  padding-left: 20px;
+}
+
+.result li {
+  margin-bottom: 0.5rem;
+}
+
+.result a {
+  color: #79c0ff;
+  text-decoration: none;
+}
+
+.result a:hover {
+  text-decoration: underline;
+}
