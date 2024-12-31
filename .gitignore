@@ -14,8 +14,6 @@ node_modules/
 .env
 
 # TypeScript
-tsconfig.json
-tsconfig.build.json
 *.tsbuildinfo
 
 # ESLint config
@@ -43,7 +41,3 @@ Thumbs.db
 *.sw?
 
 !requirements.txt
-
-# Optional: Uncomment if you don't want to commit the configuration files for IDEs:
-# .vscode/*
-# .idea/
