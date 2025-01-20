@@ -14,12 +14,12 @@ const App: React.FC = () => {
 
     setLoading(true);
     try {
-      const response = await fetch("http://127.0.0.1:5000/parse", {  // Используем 127.0.0.1, так как это локальный адрес сервера
+      const response = await fetch("http://127.0.0.1:5000/parse",
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ keywords: keywordsArray, lang: "ru" }), // Язык запросов
+        body: JSON.stringify({ keywords: keywordsArray, lang: "ru" }),
       });
 
       const data = await response.json();
