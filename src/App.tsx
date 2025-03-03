@@ -130,10 +130,6 @@ const App: React.FC = () => {
               and expand this project, allowing us to add more features and keep
               it running smoothly.
             </p>
-
-            <p>[Trust Wallet - TRC20 | Tron] - TCorTf3kgUsp8bmvVs1coVqsCfnmNgJEJK<br /><hr />
-              [BTC - COIN | Bitcoin] - bc1qaj7nhjsanmynp3zsk8amdfdfgwms3n9hzv0ezh
-            </p>
           </div>
         </div>
       )}
