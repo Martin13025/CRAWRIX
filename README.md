@@ -8,4 +8,4 @@ localization: npm install i18next react-i18next
 
 
 Server based on Python.
-v 1.1
+v 1.2
