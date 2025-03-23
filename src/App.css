@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap");
 
 .App {
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -10,6 +10,33 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(255, 255, 0, 0.4);
   color: #ffd700;
+  transition: background-color 0.3s ease;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background-color:#ffd700;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.big-letter {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.App.aggressive-mode {
+  background-color: #ff5733;
+}
+
+.App.aggressive-mode h1 {
+  color: #fff;
+}
+
+.App.aggressive-mode button {
+  background-color: #e74c3c;
+  color: white;
 }
 
 body {
@@ -19,11 +46,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: #000000;
-  font-family: 'Fira Code', monospace;
-}
-.kofi-button {
-  border: 0;
-  height: 36px;
+  font-family: "Fira Code", monospace;
 }
 
 h1 {
@@ -34,19 +57,12 @@ h1 {
   letter-spacing: 2px;
 }
 
-h1::first-letter,
-h1 span:last-child {
-  text-transform: uppercase; 
-}
-
-
-
 input[type="text"] {
   width: 80%;
   padding: 10px;
   margin-bottom: 1rem;
   font-size: 1rem;
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
   border: 1px solid #ffaa00;
   border-radius: 4px;
   outline: none;
@@ -67,7 +83,7 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
   transition: background-color 0.3s ease;
 }
 
@@ -86,7 +102,7 @@ button:disabled {
   background-color: #111;
   padding: 10px;
   border-radius: 8px;
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
 }
 
 .result h3 {
@@ -136,8 +152,15 @@ button:disabled {
 h3 {
   font-size: 1.2rem;
   color: transparent;
-  background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
-  -webkit-background-clip: text; 
+  background-image: linear-gradient(45deg,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet);
+  -webkit-background-clip: text;
   background-clip: text;
   background-size: 400% 400%;
   animation: rainbow 10s linear infinite;
@@ -147,22 +170,119 @@ h3 {
   0% {
     background-position: 0% 0%;
   }
+
   20% {
     background-position: 100% 0%;
   }
+
   40% {
     background-position: 0% 100%;
   }
+
   60% {
     background-position: 100% 100%;
   }
+
   80% {
     background-position: 50% 50%;
   }
+
   100% {
     background-position: 0% 0%;
   }
 }
+
+.modal-overlay {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: bottom 0.7s ease-in-out;
+}
+
+.modal-overlay.open {
+  bottom: -10px;
+}
+
+.modal-content {
+  position: relative;
+  background: rgb(0, 0, 0);
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 0px 6px rgb(255, 255, 0);
+}
+
+.modal-close-bar {
+  width: 50px;
+  height: 4px;
+  background-color: #333;
+  margin: 0 auto;
+  cursor: pointer;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.modal-close-bar:hover {
+  background-color: #fffb00;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffcc00;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0011ff;
+}
+
+.social-icons i {
+  margin-right: 8px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.footer-left {
+  position: fixed;
+  left: 15px;  
+  bottom: 10px;
+}
+
+.footer-center {
+  position: absolute;
+  bottom: 10px;
+  left: 160px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+
+
+
+
 
 
 
