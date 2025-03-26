@@ -30,7 +30,6 @@ def parse_duckduckgo(keyword, lang):
     except requests.exceptions.RequestException as e:
         return {'error': str(e)}
 
-
 def parse_yahoo(keyword):
     url = f"https://search.yahoo.com/search?p={keyword}"
     headers = {'User-Agent': 'Mozilla/5.0'}
@@ -50,7 +49,6 @@ def parse_yahoo(keyword):
         return full_links
     except requests.exceptions.RequestException as e:
         return {'error': str(e)}
-
 
 @app.route('/parse', methods=['POST'])
 def parse():
@@ -72,7 +70,5 @@ def parse():
 
     return jsonify(results)
 
-
 if __name__ == '__main__':
     app.run(debug=True)
-
