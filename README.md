@@ -5,4 +5,4 @@ For run frontend: >npm run dev (because of vite pack) <br />
 For run server: >python app.py
 
 Server based on Python.
-v 1.2
+v 1.3
