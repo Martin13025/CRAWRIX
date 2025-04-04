@@ -17,12 +17,15 @@ node_modules/
 *.tsbuildinfo
 
 # ESLint config
-.eslint.json
+- .eslint.json
++ .eslintcache
++ .eslint/
 
 # Build output
 dist
 dist-ssr
 build/
++ .vite/  # Кеш Vite
 
 # System files
 .DS_Store

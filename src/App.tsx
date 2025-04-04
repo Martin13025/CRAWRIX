@@ -1,6 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { translations } from "./i18n";
 import "./App.css";
+import AggressiveModeToggle from "./components/AggressiveModeToggle";
+import RightClickHandler from "./components/RightClickHandler";
+import ResultList from "./components/ResultList";
+import LanguageToggle from "./components/LanguageToggle";
+import KeywordInput from "./components/KeywordInput";
+import SubmitButton from "./components/SubmitButton";
+import Modal from "./components/Modal";
 
 const truncateLink = (link: string, maxLength = 50) => {
   return link.length > maxLength ? link.substring(0, maxLength) + "..." : link;
@@ -13,18 +20,6 @@ const App: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [aggressiveMode, setAggressiveMode] = useState<boolean>(false);
   const [language, setLanguage] = useState<string>("en");
-
-  useEffect(() => {
-    const handleRightClick = (event: MouseEvent) => {
-      event.preventDefault();
-      alert("Right-click is disabled to protect content.");
-    };
-
-    document.addEventListener("contextmenu", handleRightClick);
-    return () => {
-      document.removeEventListener("contextmenu", handleRightClick);
-    };
-  }, []);
 
   const handleSubmit = async () => {
     const keywordsArray = keywords.split(",").map((kw) => kw.trim());
@@ -82,59 +77,42 @@ const App: React.FC = () => {
       <h3 className="rainbow-text">
         {aggressiveMode ? t.aggressiveModeText : t.normalModeText}
       </h3>
-      <input
-        type="text"
+
+      <label htmlFor="keywordsInput" className="visually-hidden">
+        {t.placetext}
+      </label>
+
+      <KeywordInput
+        keywords={keywords}
+        setKeywords={setKeywords}
         placeholder={t.placeholder}
-        value={keywords}
-        onChange={(e) => setKeywords(e.target.value)}
       />
-      <div className="toggle-container">
-        <span>{aggressiveMode ? "Angry Parse (More links): ON" : "Angry Parse (More links): OFF"}</span>
-        <label className="switch">
-          <input
-            type="checkbox"
-            checked={aggressiveMode}
-            onChange={toggleAggressiveMode}
-          />
-          <span className="slider"></span>
-        </label>
-      </div>
+
+      <AggressiveModeToggle
+        aggressiveMode={aggressiveMode}
+        toggleAggressiveMode={toggleAggressiveMode}
+      />
+
+      <RightClickHandler />
+
       <hr />
-      <button onClick={handleSubmit} disabled={loading}>
-        {loading ? t.parseButton + "..." : t.parseButton}
-      </button>
+
+      <SubmitButton
+        handleSubmit={handleSubmit}
+        loading={loading}
+        text={t.parseButton}
+      />
 
       {result && (
-        <div className="result">
-          <h3>{t.results}</h3>
-          {result.map((item: any, index: number) => (
-            <div key={index}>
-              <h4>Keyword: {item.keyword}</h4>
-              {item.links && item.links.length > 0 ? (
-                <ul>
-                  {item.links.map((link: string, idx: number) => (
-                    <li key={idx}>
-                      <a
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title={link}
-                      >
-                        {truncateLink(link)}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p>{t.noLinks}</p>
-              )}
-            </div>
-          ))}
-          <button onClick={handleBack} className="back-button">
-            {t.backButton}
-          </button>
-        </div>
+        <ResultList
+          result={result}
+          truncateLink={truncateLink}
+          handleBack={handleBack}
+          backButtonText={t.backButton}
+          noLinksText={t.noLinks}
+        />
       )}
+
       <hr />
       <button onClick={toggleModal} className="modal-toggle-button">
         {isModalOpen ? t.modalTitle : t.modalTitle}
@@ -142,40 +120,64 @@ const App: React.FC = () => {
 
       <div className="footer">
         <div className="footer-left">v 1.2</div>
-        <div className="footer-center">All rights reserved. Developer: Martin Daniels.</div>
+        <div className="footer-center">
+          All rights reserved. Developer: Martin Daniels.
+        </div>
       </div>
 
       <div className={`modal-overlay ${isModalOpen ? "open" : ""}`}>
-        <div className="modal-content">
-          <div className="modal-close-bar" onClick={closeModal}></div>
-          <h3>{t.modalTitle}</h3>
-          <p>{t.modalContent}</p>
-          <h3>{t.supportTitle}</h3>
-          <p>{t.supportContent}</p>
-          <p>
-            [Trust Wallet - TRC20 | Tron] - TCorTf3kgUsp8bmvVs1coVqsCfnmNgJEJK
-            <hr />
-            [BTC - COIN | Bitcoin] - bc1qaj7nhjsanmynp3zsk8amdfdfgwms3n9hzv0ezh
-          </p>
+        <Modal
+          isOpen={isModalOpen}
+          closeModal={closeModal}
+          title={t.modalTitle}
+          content={
+            <>
+              <p>{t.modalContent}</p>
+              <h3>{t.supportTitle}</h3>
+              <p>{t.supportContent}</p>
 
-          <h3>{t.connectTitle}</h3>
-          <div className="social-icons">
-            <a href="https://linkedin.com/in/martin-daniels-a6b2b7269" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/Martin13025" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://t.me/LuciusNumerius" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-telegram"></i> Telegram
-            </a>
-          </div>
-        </div>
+              <div className="crypto-box">
+                <p>
+                  [Trust Wallet - TRC20 | Tron] -
+                  TCorTf3kgUsp8bmvVs1coVqsCfnmNgJEJK
+                </p>
+                <hr />
+                <p>
+                  [BTC - COIN | Bitcoin] -
+                  bc1qaj7nhjsanmynp3zsk8amdfdfgwms3n9hzv0ezh
+                </p>
+              </div>
+
+              <h3>{t.connectTitle}</h3>
+              <div className="social-icons">
+                <a
+                  href="https://linkedin.com/in/martin-daniels-a6b2b7269"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a
+                  href="https://github.com/Martin13025"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-github"></i> GitHub
+                </a>
+                <a
+                  href="https://t.me/M2rR4b4t"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-telegram"></i> Telegram
+                </a>
+              </div>
+            </>
+          }
+        />
       </div>
       <hr />
-      <button onClick={toggleLanguage}>
-        {language === "en" ? "Es" : "Eng"}
-      </button>
+      <LanguageToggle language={language} toggleLanguage={toggleLanguage} />
     </div>
   );
 };
