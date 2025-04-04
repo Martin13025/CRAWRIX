@@ -4,9 +4,11 @@
   font-family: 'Share Tech Mono', monospace;
   line-height: 1.5;
   font-weight: 400;
+
   color-scheme: dark;
   color: #ffdd44;
   background-color: #000000;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -107,3 +109,11 @@ button:focus-visible {
   }
 }
 
+.footer-center {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 13px;
+    color: #ffdd44;
+    padding: 5px 10px;
+}
