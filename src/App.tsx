@@ -8,7 +8,6 @@ import LanguageToggle from "./components/LanguageToggle";
 import KeywordInput from "./components/KeywordInput";
 import SubmitButton from "./components/SubmitButton";
 import Modal from "./components/Modal";
-import EasterEgg from "./components/EasterEgg";
 
 const truncateLink = (link: string, maxLength = 50) => {
   return link.length > maxLength ? link.substring(0, maxLength) + "..." : link;
@@ -120,9 +119,7 @@ const App: React.FC = () => {
       </button>
 
       <div className="footer">
-        <div>{/* TODO: Пасхалку И ВСЕ ФАЙЛЫ СВЯЗАННЫЕ С НЕЙ вырезать при КОММИТЕ НА ГИТХАБ <div className="footer-left">v 1.2</div> */}
-          <EasterEgg />
-        </div>
+        <div className="footer-left">v 1.2</div>
         <div className="footer-center">
           All rights reserved. Developer: Martin Daniels.
         </div>
