@@ -138,7 +138,7 @@ const App: React.FC = () => {
 
               <div className="crypto-box">
                 <p>
-                  [Trust Wallet - TRC20 | Tron] -
+                  [USDT - TRC20 | Tron] -
                   TCorTf3kgUsp8bmvVs1coVqsCfnmNgJEJK
                 </p>
                 <hr />
