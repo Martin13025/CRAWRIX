@@ -18,7 +18,7 @@ const Modal: React.FC<ModalProps> = ({
       <div className="modal-content">
         <div className="modal-close-bar" onClick={closeModal}></div>
         <h3>{title}</h3>
-        <div>{content}</div> {/* Здесь исправлено */}
+        <div>{content}</div>
       </div>
     </div>
   );
