@@ -8,8 +8,8 @@
     "build": "tsc -b && vite build", 
     "lint": "eslint .", 
     "preview": "vite preview", 
-    "start": "python server/app.py",  // команда для запуска сервера
-    "heroku-postbuild": "npm run build" // для автоматической сборки на платформе типа Heroku
+    "start": "python server/app.py",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "i18next": "^24.2.3",
