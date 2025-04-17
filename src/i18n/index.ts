@@ -1,4 +1,25 @@
-export const translations = {
+export type Language = "en" | "es";
+
+type Translations = {
+  [key in Language]: {
+    title: string;
+    subheading: string;
+    placeholder: string;
+    parseButton: string;
+    results: string;
+    noLinks: string;
+    backButton: string;
+    modalTitle: string;
+    modalContent: string;
+    supportTitle: string;
+    supportContent: string;
+    connectTitle: string;
+    aggressiveModeText: string;
+    normalModeText: string;
+  };
+};
+
+export const translations: Translations = {
   en: {
     title: "crawlLab",
     subheading: "Look for everything you need",
@@ -36,4 +57,3 @@ export const translations = {
     normalModeText: "Busca todo lo que necesitas",
   },
 };
-
