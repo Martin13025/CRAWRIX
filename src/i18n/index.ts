@@ -1,29 +1,9 @@
-export type Language = "en" | "es";
-
-type Translations = {
-  [key in Language]: {
-    title: string;
-    subheading: string;
-    placeholder: string;
-    parseButton: string;
-    results: string;
-    noLinks: string;
-    backButton: string;
-    modalTitle: string;
-    modalContent: string;
-    supportTitle: string;
-    supportContent: string;
-    connectTitle: string;
-    aggressiveModeText: string;
-    normalModeText: string;
-  };
-};
-
-export const translations: Translations = {
+export const translations = {
   en: {
     title: "crawlLab",
-    subheading: "Look for everything you need",
+    subheading: "Look for everything MORE you need",
     placeholder: "Enter keywords (separated by commas)",
+    placetext: "Enter keywords",
     parseButton: "Parse",
     results: "Results:",
     noLinks: "No links found",
@@ -40,8 +20,9 @@ export const translations: Translations = {
   },
   es: {
     title: "crawlLab",
-    subheading: "Busca todo lo que necesitas",
+    subheading: "Busca todo lo que MÁS necesitas",
     placeholder: "Ingresa palabras clave (separadas por comas)",
+    placetext: "Ingresa palabras",
     parseButton: "Parsear",
     results: "Resultados:",
     noLinks: "No se encontraron enlaces",
