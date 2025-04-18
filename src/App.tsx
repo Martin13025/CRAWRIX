@@ -9,8 +9,6 @@ import KeywordInput from "./components/KeywordInput";
 import SubmitButton from "./components/SubmitButton";
 import Modal from "./components/Modal";
 
-type Lang = "en" | "es";
-
 const truncateLink = (link: string, maxLength = 50) => {
   return link.length > maxLength ? link.substring(0, maxLength) + "..." : link;
 };
@@ -21,9 +19,7 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [aggressiveMode, setAggressiveMode] = useState<boolean>(false);
-  const [language, setLanguage] = useState<Lang>("en");
-
-  const t = translations[language]; // безопасный доступ к переводу
+  const [language, setLanguage] = useState<string>("en");
 
   const handleSubmit = async () => {
     const keywordsArray = keywords.split(",").map((kw) => kw.trim());
@@ -38,7 +34,7 @@ const App: React.FC = () => {
         },
         body: JSON.stringify({
           keywords: keywordsArray,
-          lang: language,
+          lang: language === "es" ? "es" : "en",
           aggressive_mode: aggressiveMode,
         }),
       });
@@ -73,6 +69,8 @@ const App: React.FC = () => {
     setLanguage(language === "en" ? "es" : "en");
   };
 
+  const t = translations[language];
+
   return (
     <div className={`App ${aggressiveMode ? "aggressive-mode" : ""}`}>
       <h1>{t.title}</h1>
@@ -81,7 +79,7 @@ const App: React.FC = () => {
       </h3>
 
       <label htmlFor="keywordsInput" className="visually-hidden">
-        {t.placeholder}
+        {t.placetext}
       </label>
 
       <KeywordInput
@@ -117,7 +115,7 @@ const App: React.FC = () => {
 
       <hr />
       <button onClick={toggleModal} className="modal-toggle-button">
-        {t.modalTitle}
+        {isModalOpen ? t.modalTitle : t.modalTitle}
       </button>
 
       <div className="footer">
