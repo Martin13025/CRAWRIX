@@ -3,11 +3,10 @@ from flask_cors import CORS
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, parse_qs
-import os
+
 
 app = Flask(__name__)
-
-CORS(app)
+CORS(app, origins="http://localhost:5173")
 
 def parse_duckduckgo(keyword, lang):
     url = f"https://duckduckgo.com/html/?q={keyword}&kl={lang}-es" if lang == 'es' else f"https://duckduckgo.com/html/?q={keyword}&kl={lang}-en"
@@ -73,6 +72,5 @@ def parse():
     return jsonify(results)
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  
-    app.run(host='0.0.0.0', port=port)
+    app.run(debug=True)
 
