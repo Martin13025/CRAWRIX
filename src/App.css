@@ -276,3 +276,79 @@ h3 {
   bottom: 10px;
   left: 1510px;
 }
+
+
+@media screen and (max-width: 768px) {
+  .App {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .big-letter {
+    font-size: 3rem;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .result {
+    padding: 8px;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .footer-left, .footer-center {
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+
+
+  .social-icons a {
+    font-size: 16px;
+  }
+
+  .crypto-box {
+    font-size: 12px;
+  }
+
+  .modal-content {
+    max-width: 90%;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .big-letter {
+    font-size: 2.5rem;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+
+  .modal-close-bar {
+    width: 40px;
+    height: 3px;
+  }
+}
+
