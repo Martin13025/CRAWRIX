@@ -212,7 +212,9 @@ h3 {
   margin: 0 auto;
   border-radius: var(--border-radius);
   box-shadow: 0 0px 6px var(--primary-color);
+  overflow-y: auto;
 }
+
 
 .modal-close-bar {
   width: 50px;
@@ -316,6 +318,8 @@ h3 {
   .modal-content {
     width: 90%;
     padding: 15px;
+    max-height: 80vh; 
+    overflow-y: auto;
   }
 
   .social-icons a {
@@ -347,9 +351,10 @@ h3 {
   .result {
     padding: 8px;
   }
+
+  .modal-content {
+    width: 90%;
+    padding: 12px;
+    max-height: 70vh;
+  }
 }
-
-
-
-
-
