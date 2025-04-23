@@ -9,13 +9,13 @@ import KeywordInput from "./components/KeywordInput";
 import SubmitButton from "./components/SubmitButton";
 import Modal from "./components/Modal";
 
-
-type Language = keyof typeof translations; 
-
+type Language = keyof typeof translations;
 
 const truncateLink = (link: string, maxLength = 50) => {
   return link.length > maxLength ? link.substring(0, maxLength) + "..." : link;
 };
+
+const API_URL = "https://crawllab.onrender.com/parse";
 
 const App: React.FC = () => {
   const [keywords, setKeywords] = useState<string>("");
@@ -23,7 +23,7 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [aggressiveMode, setAggressiveMode] = useState<boolean>(false);
-  const [language, setLanguage] = useState<Language>("en"); 
+  const [language, setLanguage] = useState<Language>("en");
 
   const handleSubmit = async () => {
     const keywordsArray = keywords.split(",").map((kw) => kw.trim());
@@ -31,7 +31,7 @@ const App: React.FC = () => {
 
     setLoading(true);
     try {
-      const response = await fetch("http://127.0.0.1:5000/parse", {
+      const response = await fetch(API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -73,7 +73,7 @@ const App: React.FC = () => {
     setLanguage(language === "en" ? "es" : "en");
   };
 
-  const t = translations[language];  
+  const t = translations[language];
 
   return (
     <div className={`App ${aggressiveMode ? "aggressive-mode" : ""}`}>
@@ -123,7 +123,7 @@ const App: React.FC = () => {
       </button>
 
       <div className="footer">
-      <div className="footer-left">v 1.2</div>{/*<div className="footer-left">v 1.2</div>*/} 
+        <div className="footer-left">v 1.2</div>
         <div className="footer-center">
           All rights reserved. Developer: Martin Daniels.
         </div>
@@ -178,6 +178,7 @@ const App: React.FC = () => {
           }
         />
       </div>
+
       <hr />
       <LanguageToggle language={language} toggleLanguage={toggleLanguage} />
     </div>
