@@ -277,11 +277,9 @@ h3 {
   left: 1510px;
 }
 
-
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .App {
-    padding: 10px;
-    max-width: 100%;
+    padding: 15px;
   }
 
   h1 {
@@ -294,61 +292,64 @@ h3 {
 
   input[type="text"] {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 0.5rem;
+    padding: 8px;
   }
 
   button {
     width: 100%;
-    padding: 12px;
+    padding: 12px 20px;
   }
 
   .result {
-    padding: 8px;
+    padding: 12px;
   }
 
   .footer {
-    flex-direction: column;
-    padding: 10px 0;
+    font-size: 12px;
   }
 
   .footer-left, .footer-center {
-    position: relative;
-    left: 0;
-    bottom: 0;
+    font-size: 12px;
+    left: 10px;
   }
 
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
 
   .social-icons a {
     font-size: 16px;
   }
-
-  .crypto-box {
-    font-size: 12px;
-  }
-
-  .modal-content {
-    max-width: 90%;
-  }
 }
 
+@media (max-width: 480px) {
+  .App {
+    padding: 10px;
+  }
 
-@media screen and (max-width: 480px) {
   h1 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .big-letter {
     font-size: 2.5rem;
   }
 
-  .footer {
-    font-size: 12px;
+  input[type="text"] {
+    padding: 6px;
   }
 
-  .modal-close-bar {
-    width: 40px;
-    height: 3px;
+  button {
+    padding: 10px 15px;
+  }
+
+  .result {
+    padding: 8px;
   }
 }
+
+
+
+
 
