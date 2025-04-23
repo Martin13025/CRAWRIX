@@ -180,7 +180,9 @@ const App: React.FC = () => {
       </div>
 
       <hr />
-      <LanguageToggle language={language} toggleLanguage={toggleLanguage} />
+      {!result && (
+        <LanguageToggle language={language} toggleLanguage={toggleLanguage} />
+      )}
     </div>
   );
 };
