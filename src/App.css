@@ -277,7 +277,17 @@ h3 {
 .footer-center {
   position: fixed;
   bottom: 10px;
-  left: 1510px;
+  right: 10px;
+  font-size: 13px;
+  color: #ffdd44;
+  padding: 6px 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  max-width: 95vw;
+  z-index: 999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
@@ -349,6 +359,17 @@ h3 {
     font-size: 0.95rem;
     display: block;
     word-break: break-all;
+  }
+
+  .footer-center {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    bottom: 8px;
+    font-size: 12px;
+    text-align: center;
+    white-space: normal;
+    max-width: 90vw;
   }
 }
 
