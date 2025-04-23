@@ -278,6 +278,7 @@ h3 {
   left: 1510px;
 }
 
+
 @media (max-width: 768px) {
   .App {
     padding: 15px;
@@ -290,15 +291,21 @@ h3 {
   .big-letter {
     font-size: 3rem;
   }
-
-  input[type="text"] {
+  
+  .crypto-box {
+    display: block;
     width: 100%;
-    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"] {
+    width: 90%;
+    margin: 0 auto;
   }
 
   button {
-    width: 100%;
-    padding: 12px 20px;
+    width: auto;
+    padding: 10px 15px;
   }
 
   .result {
@@ -330,7 +337,13 @@ h3 {
   .App {
     padding: 10px;
   }
-
+  
+  .crypto-box {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
   h1 {
     font-size: 1.2rem;
   }
@@ -340,11 +353,14 @@ h3 {
   }
 
   input[type="text"] {
+    width: 95%;
     padding: 6px;
+    margin: 0 auto;
   }
 
   button {
-    padding: 10px 15px;
+    width: auto;
+    padding: 8px 12px;
   }
 
   .result {
