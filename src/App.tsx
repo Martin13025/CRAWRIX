@@ -9,6 +9,10 @@ import KeywordInput from "./components/KeywordInput";
 import SubmitButton from "./components/SubmitButton";
 import Modal from "./components/Modal";
 
+
+type Language = keyof typeof translations; 
+
+
 const truncateLink = (link: string, maxLength = 50) => {
   return link.length > maxLength ? link.substring(0, maxLength) + "..." : link;
 };
@@ -19,7 +23,7 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [aggressiveMode, setAggressiveMode] = useState<boolean>(false);
-  const [language, setLanguage] = useState<string>("en");
+  const [language, setLanguage] = useState<Language>("en"); 
 
   const handleSubmit = async () => {
     const keywordsArray = keywords.split(",").map((kw) => kw.trim());
@@ -69,7 +73,7 @@ const App: React.FC = () => {
     setLanguage(language === "en" ? "es" : "en");
   };
 
-  const t = translations[language];
+  const t = translations[language];  
 
   return (
     <div className={`App ${aggressiveMode ? "aggressive-mode" : ""}`}>
@@ -119,7 +123,7 @@ const App: React.FC = () => {
       </button>
 
       <div className="footer">
-        <div className="footer-left">v 1.2</div>
+      <div className="footer-left">v 1.2</div>{/*<div className="footer-left">v 1.2</div>*/} 
         <div className="footer-center">
           All rights reserved. Developer: Martin Daniels.
         </div>
@@ -138,13 +142,11 @@ const App: React.FC = () => {
 
               <div className="crypto-box">
                 <p>
-                  [USDT - TRC20 | Tron] -
-                  TCorTf3kgUsp8bmvVs1coVqsCfnmNgJEJK
+                  [USDT - TRC20 | Tron] - TCorTf3kgUsp8bmvVs1coVqsCfnmNgJEJK
                 </p>
                 <hr />
                 <p>
-                  [BTC - COIN | Bitcoin] -
-                  bc1qaj7nhjsanmynp3zsk8amdfdfgwms3n9hzv0ezh
+                  [BTC - COIN | Bitcoin] - bc1qaj7nhjsanmynp3zsk8amdfdfgwms3n9hzv0ezh
                 </p>
               </div>
 
