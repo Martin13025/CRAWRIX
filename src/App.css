@@ -310,10 +310,6 @@ h3 {
     padding: 10px 15px;
   }
 
-  .result {
-    padding: 12px;
-  }
-
   .footer {
     font-size: 12px;
   }
@@ -332,6 +328,27 @@ h3 {
 
   .social-icons a {
     font-size: 16px;
+  }
+
+  result {
+    padding: 10px;
+    font-size: 0.95rem;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .result h3 {
+    font-size: 1.2rem;
+  }
+
+  .result h4 {
+    font-size: 1rem;
+  }
+
+  .result a {
+    font-size: 0.95rem;
+    display: block;
+    word-break: break-all;
   }
 }
 
