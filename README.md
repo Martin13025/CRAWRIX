@@ -44,10 +44,17 @@
   - Adjusted text, background, and button styling for a polished look.
 
 ## GitHub Updates 🏗
+
+- **Initialized and pushed the project to GitHub:**
+  - Added the complete full-stack project structure (React frontend + Flask backend).
+  - Ensured proper `.gitignore` and environment configuration for clean versioning.
+
 - **Feature branch workflow:**
-  - Uploaded modified files and committed changes.
-  - Created a **Pull Request (PR)** to merge into `main`.
-  - Prepared for final merging.
+  - Uploaded modified files and committed changes locally.
+  - Pushed changes to a separate feature branch.
+  - Created a Pull Request (PR) to merge into `main`.
+  - Prepared for final merging and deployment.
+
 
 ---
 
