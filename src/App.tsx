@@ -123,7 +123,7 @@ const App: React.FC = () => {
       </button>
 
       <div className="footer">
-        <div className="footer-left">v 1.2</div>
+        <div className="footer-left">v 1.4</div>
         <div className="footer-center">
           All rights reserved. Developer: Martin Daniels.
         </div>
