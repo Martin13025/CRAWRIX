@@ -1,5 +1,22 @@
 # Changelog 🚀
 
+## v1.4 🐱‍👤
+
+- **✅ Deployed the full-stack application to Render:**
+  - Frontend (React) and backend (Flask) are now live and publicly accessible.
+  - Configuration adjusted for seamless client-server communication.
+
+- **📱 Improved mobile experience:**
+  - Enhanced responsive design across key pages.
+  - Layout and UI elements now adapt better to small screen devices.
+
+- **<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" alt="Git logo" width="20" style="vertical-align:middle; margin-right: 5px;"> Git version control:**
+  - Utilized Git for local version control and commit management.
+  - Maintained structured commit history throughout development.
+  - Project managed via a local Git repository.
+
+
+
 ## v1.3 ✨
 - **Refactored the application into microservices (components)** for better maintainability and performance.
 - **Improved text styling** for enhanced readability and appearance. 🎨
