@@ -3,7 +3,7 @@
 ## v1.4.0 🥷
 
 - **✅ Deployed the full-stack application to Render:**
-  - Frontend (React) and backend (Flask) are now live and publicly accessible.
+  - Frontend (React) and backend (Python on Flask) are now live and publicly accessible.
   - Configuration adjusted for seamless client-server communication.
 
 - **📱 Improved mobile experience:**
