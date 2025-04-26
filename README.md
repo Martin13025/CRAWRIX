@@ -1,6 +1,6 @@
 # Changelog 🚀
 
-## v1.4 🐱‍👤
+## v1.4.0 🥷
 
 - **✅ Deployed the full-stack application to Render:**
   - Frontend (React) and backend (Flask) are now live and publicly accessible.
@@ -16,12 +16,11 @@
   - Project managed via a local Git repository.
 
 
-
-## v1.3 ✨
+## v1.3.0 ✨
 - **Refactored the application into microservices (components)** for better maintainability and performance.
 - **Improved text styling** for enhanced readability and appearance. 🎨
 
-## v1.2 🌍
+## v1.2.0 🌍
 - **Implemented translations**:
   - Added support for **English & Spanish** via `src/i18n/index.ts`.
   - Adjusted text dynamically based on the selected language.
@@ -33,7 +32,7 @@
   - Improved state management for language selection and aggressive mode.
   - Optimized API calls to prevent redundant requests.
 
-## v1.1 🛠
+## v1.1.0 🛠
 - **New UI Enhancements**:
   - Added a **button to toggle a modal window** with project details.
   - Improved user interface with **hints and navigation options**.
