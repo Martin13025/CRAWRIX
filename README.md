@@ -1,6 +1,6 @@
 # Changelog 🚀
 
-## v1.4.0 🥷
+## v1.4.0 🐱‍👤
 
 - **✅ Deployed the full-stack application to Render:**
   - Frontend (React) and backend (Python on Flask) are now live and publicly accessible.
