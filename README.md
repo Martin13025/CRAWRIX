@@ -1,5 +1,10 @@
 # Changelog 🚀
 
+## v1.5.0 🔄
+
+- **The project has been renamed to something more recognizable.**
+  - Crawrix
+
 ## v1.4.0 🐱‍👤
 
 - **✅ Deployed the full-stack application to Render:**
@@ -14,7 +19,6 @@
   - Utilized Git for local version control and commit management.
   - Maintained structured commit history throughout development.
   - Project managed via a local Git repository.
-
 
 ## v1.3.0 ✨
 - **Refactored the application into microservices (components)** for better maintainability and performance.
