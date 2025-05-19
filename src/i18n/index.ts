@@ -23,7 +23,7 @@ type Translation = {
   
   export const translations: Translations = {
     en: {
-      title: "crawlLab",
+      title: "Crawrix",
       subheading: "Look for everything MORE you need",
       placeholder: "Enter keywords (separated by commas)",
       placetext: "Enter keywords",
@@ -33,16 +33,16 @@ type Translation = {
       backButton: "Back to Search",
       modalTitle: "About this service",
       modalContent:
-        "CrawlLab is a tool designed to simplify your SEO analysis and improve your online visibility. It helps you discover relevant links based on keywords you provide, making it an essential tool for SEO specialists, content creators, and digital marketers.",
+        "Crawrix is a tool designed to simplify your SEO analysis and improve your online visibility. It helps you discover relevant links based on keywords you provide, making it an essential tool for SEO specialists, content creators, and digital marketers.",
       supportTitle: "Support the developer",
       supportContent:
-        "If you find CrawlLab useful and want to support the development of this tool, you can make a donation. Your support helps improve and expand this project, allowing us to add more features.",
+        "If you find Crawrix useful and want to support the development of this tool, you can make a donation. Your support helps improve and expand this project, allowing us to add more features.",
       connectTitle: "Connect with the developer",
       aggressiveModeText: "Look for everything MORE you need",
       normalModeText: "Look for everything you need",
     },
     es: {
-      title: "crawlLab",
+      title: "Crawrix",
       subheading: "Busca todo lo que MÁS necesitas",
       placeholder: "Ingresa palabras clave (separadas por comas)",
       placetext: "Ingresa palabras",
@@ -52,10 +52,10 @@ type Translation = {
       backButton: "Volver a la búsqueda",
       modalTitle: "Sobre este servicio",
       modalContent:
-        "CrawlLab es una herramienta diseñada para simplificar tu análisis SEO y mejorar tu visibilidad en línea. Te ayuda a descubrir enlaces relevantes según las palabras clave que proporcionas, siendo una herramienta esencial para especialistas SEO, creadores de contenido y comercializadores digitales.",
+        "Crawrix es una herramienta diseñada para simplificar tu análisis SEO y mejorar tu visibilidad en línea. Te ayuda a descubrir enlaces relevantes según las palabras clave que proporcionas, siendo una herramienta esencial para especialistas SEO, creadores de contenido y comercializadores digitales.",
       supportTitle: "Apoya al desarrollador",
       supportContent:
-        "Si encuentras útil CrawlLab y deseas apoyar el desarrollo de esta herramienta, puedes hacer una donación. Tu apoyo ayuda a mejorar y expandir este proyecto, permitiéndonos agregar más funciones.",
+        "Si encuentras útil Crawrix y deseas apoyar el desarrollo de esta herramienta, puedes hacer una donación. Tu apoyo ayuda a mejorar y expandir este proyecto, permitiéndonos agregar más funciones.",
       connectTitle: "Conéctate con el desarrollador",
       aggressiveModeText: "Busca todo lo que MÁS necesitas",
       normalModeText: "Busca todo lo que necesitas",
