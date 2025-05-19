@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 General Question / Support
+    url: https://github.com/your-username/crawrix/discussions
+    about: Please ask general questions or request help in GitHub Discussions.
+issue_templates:
+  - name: 🐞 Bug Report
+    description: Report a bug to help improve the project
+    labels: [bug]
+    file: bug_report.md
+  - name: ✨ Feature Request
+    description: Suggest a new idea or enhancement
+    labels: [enhancement]
+    file: feature_request.md
