@@ -8,7 +8,7 @@ If you intend to use this software (or its significant parts) in a commercial co
 
 # Changelog 🚀
 
-## v1.5.0 🔄
+## v1.4.1 🔄
 
 - **The project has been renamed to something more recognizable.**
   - Crawrix
