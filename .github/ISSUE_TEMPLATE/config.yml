@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: 💬 General Question / Support
-    url: https://github.com/your-username/crawrix/discussions
+    url: https://github.com/Martin13025/crawrix/discussions
     about: Please ask general questions or request help in GitHub Discussions.
 issue_templates:
   - name: 🐞 Bug Report
