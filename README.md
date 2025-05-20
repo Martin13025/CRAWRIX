@@ -12,7 +12,7 @@ If you intend to use this software (or its significant parts) in a commercial co
 
 - **The project has been renamed to something more recognizable - Crawrix**
 
-## v1.4.0 🐱‍👤
+## v1.4.0 🌎
 
 - **✅ Deployed the full-stack application to Render:**
   - Frontend (React) and backend (Python on Flask) are now live and publicly accessible.
