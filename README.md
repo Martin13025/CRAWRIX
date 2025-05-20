@@ -10,8 +10,7 @@ If you intend to use this software (or its significant parts) in a commercial co
 
 ## v1.4.1 🔄
 
-- **The project has been renamed to something more recognizable.**
-  - Crawrix
+- **The project has been renamed to something more recognizable - Crawrix**
 
 ## v1.4.0 🐱‍👤
 
