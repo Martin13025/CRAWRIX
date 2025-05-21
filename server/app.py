@@ -6,7 +6,7 @@ from urllib.parse import urlparse, parse_qs
 
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173", "https://crawllab-frontend.onrender.com"])
+CORS(app, origins=["http://localhost:5173", "https://crawllab-frontend.onrender.com", "https://rawrix.com", "https://www.crawrix.com"])
 
 def parse_duckduckgo(keyword, lang):
     url = f"https://duckduckgo.com/html/?q={keyword}&kl={lang}-es" if lang == 'es' else f"https://duckduckgo.com/html/?q={keyword}&kl={lang}-en"
