@@ -169,16 +169,15 @@ h2 {
 }
 
 @keyframes rainbow {
-  0%,
-  100% {
+  0%,100% {
     background-position: 0% 0%;
   }
 
-  20% {
+  50% {
     background-position: 100% 0%;
   }
-
-  40% {
+}
+  /*40% {
     background-position: 0% 100%;
   }
 
@@ -188,8 +187,7 @@ h2 {
 
   80% {
     background-position: 50% 50%;
-  }
-}
+  }*/
 
 .modal-overlay {
   position: fixed;
