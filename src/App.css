@@ -164,8 +164,8 @@ h2 {
   );
   -webkit-background-clip: text;
   background-clip: text;
-  background-size: 400% 400%;
-  animation: rainbow 10s linear infinite;
+  background-size: 400% 100%;
+  animation: rainbow 10s ease-in-out infinite;
 }
 
 @keyframes rainbow {
