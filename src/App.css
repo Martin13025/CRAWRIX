@@ -164,7 +164,7 @@ h2 {
   );
   -webkit-background-clip: text;
   background-clip: text;
-  animation: rainbowHue 10s linear infinite;
+  animation: rainbowHue 6s linear infinite;
 }
 
 @keyframes rainbowHue {
