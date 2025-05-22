@@ -78,9 +78,9 @@ const App: React.FC = () => {
   return (
     <div className={`App ${aggressiveMode ? "aggressive-mode" : ""}`}>
       <h1>{t.title}</h1>
-      <h3 className="rainbow-text">
+      <h2 className="rainbow-text">
         {aggressiveMode ? t.aggressiveModeText : t.normalModeText}
-      </h3>
+      </h2>
 
       <label htmlFor="keywordsInput" className="visually-hidden">
         {t.placetext}
