@@ -77,10 +77,10 @@ const App: React.FC = () => {
 
   return (
     <>
-    <div className="attention-window">
-        {t.attentionwindow}
-    </div>
     <div className={`App ${aggressiveMode ? "aggressive-mode" : ""}`}>
+      <div className="attention-window">
+        {t.attentionwindow}
+      </div>
       <h1>{t.title}</h1>
       <h2 className="rainbow-text">
         {aggressiveMode ? t.aggressiveModeText : t.normalModeText}
