@@ -453,16 +453,15 @@ h2 {
 }
 
 .attention-window {
-  border: 1px solid #f44336; 
+  border: 1px solid #f44336;
   background-color: #000000;
-  color: #d32f2f; 
+  color: #d32f2f;
   font-size: 14px;
-  font-weight: 300; 
+  font-weight: 300;
   padding: 12px;
   border-radius: 6px;
   margin-bottom: 20px;
-  width: 350px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-left: auto;
+
+  width: 100%;
+  box-sizing: border-box;
 }
