@@ -76,7 +76,6 @@ const App: React.FC = () => {
   const t = translations[language];
 
   return (
-    <>
     <div className={`App ${aggressiveMode ? "aggressive-mode" : ""}`}>
       <div className="attention-window">
         {t.attentionwindow}
@@ -188,7 +187,6 @@ const App: React.FC = () => {
         <LanguageToggle language={language} toggleLanguage={toggleLanguage} />
       )}
     </div>
-    </>
   );
 };
 
