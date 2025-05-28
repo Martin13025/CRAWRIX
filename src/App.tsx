@@ -76,6 +76,9 @@ const App: React.FC = () => {
   const t = translations[language];
 
   return (
+    <div className="attention-window">
+        {t.attentionwindow}
+    </div>
     <div className={`App ${aggressiveMode ? "aggressive-mode" : ""}`}>
       <h1>{t.title}</h1>
       <h2 className="rainbow-text">
