@@ -460,6 +460,8 @@ h2 {
   font-weight: 300;
   padding: 12px;
   border-radius: 6px;
-  margin-bottom: 20px;
+  margin: 20px auto; 
   box-sizing: border-box;
+  max-width: 600px;
+  width: 100%;
 }
