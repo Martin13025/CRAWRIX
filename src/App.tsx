@@ -76,6 +76,7 @@ const App: React.FC = () => {
   const t = translations[language];
 
   return (
+    <>
     <div className="attention-window">
         {t.attentionwindow}
     </div>
@@ -187,6 +188,7 @@ const App: React.FC = () => {
         <LanguageToggle language={language} toggleLanguage={toggleLanguage} />
       )}
     </div>
+    </>
   );
 };
 
