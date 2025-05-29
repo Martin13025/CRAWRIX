@@ -40,7 +40,7 @@ type Translation = {
       connectTitle: "Connect with the developer",
       aggressiveModeText: "Look for everything MORE you need",
       normalModeText: "Look for everything you need",
-      attentionwindow: "Notice: This service is currently running on a temporary host. Please refresh the page and wait a few seconds while the server starts. I'm working on a permanent solution — thank you for your patience!",
+      attentionwindow: "Notice: This service is currently running on a temporary host. Please reboot before starting work refresh the page and wait a few seconds while the server starts. I'm working on a permanent solution — thank you for your patience!",
     },
     es: {
       title: "Crawrix",
@@ -60,6 +60,6 @@ type Translation = {
       connectTitle: "Conéctate con el desarrollador",
       aggressiveModeText: "Busca todo lo que MÁS necesitas",
       normalModeText: "Busca todo lo que necesitas",
-      attentionwindow: "Aviso: Este servicio se está ejecutando actualmente en un host temporal. Actualice la página y espere unos segundos mientras se inicia el servidor. Estoy buscando una solución permanente. ¡Gracias por su paciencia!",
+      attentionwindow: "Aviso: Este servicio se está ejecutando actualmente en un host temporal. Por favor, reinicie el sistema antes de empezar a trabajar, actualice la página y espere unos segundos mientras se inicia el servidor. Estoy buscando una solución permanente. ¡Gracias por su paciencia!",
     },
   };
