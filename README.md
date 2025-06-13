@@ -14,6 +14,7 @@ If you intend to use this software (or its significant parts) in a commercial co
 
 ### ✨ Added
 - Added attention window.
+![1](https://github.com/user-attachments/assets/fcc30eb1-54cd-4483-a77c-09a60f3609bd)
 
 ### 🎨 Changed
 - Updated web app icon.
