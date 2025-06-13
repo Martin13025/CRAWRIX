@@ -8,7 +8,17 @@ If you intend to use this software (or its significant parts) in a commercial co
 
 # Changelog 🚀
 
-## v1.4.1 🔄
+## v1.4.2 💥 - Patch
+### 🐛 Fixed
+- Checked and updated `robots.txt`.
+
+### ✨ Added
+- Added attention window.
+
+### 🎨 Changed
+- Updated web app icon.
+
+## v1.4.1 🔄 - Patch
 
 - **The project has been renamed to something more recognizable - Crawrix**
 
