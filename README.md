@@ -1,8 +1,8 @@
 # Commercial Use ⚠
 
-This project is licensed under the MIT License for non-commercial and personal use.
+This project is licensed under the Apache License Version 2.0.
 
-If you intend to use this software (or its significant parts) in a commercial context — including SaaS platforms, reselling, or integrating into a paid product — please contact the author to obtain a separate commercial license.
+If you intend to use this software (or its significant parts) in a commercial context — including SaaS platforms, reselling, or integrating into a paid product — please contact the author.
 
 📧 Email: danpain800@gmail.com
 
