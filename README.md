@@ -8,7 +8,7 @@ If you intend to use this software (or its significant parts) in a commercial co
 
 # Changelog 🚀
 
-## v1.4.2 💥 - Patch
+## v1.4.2 💥- Patch
 ### 🐛 Fixed
 - Checked and updated `robots.txt`.
 
