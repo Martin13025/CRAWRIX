@@ -68,12 +68,7 @@ def parse():
             'keyword': keyword,
             'links': combined_links
         })
-    results = [
-    {
-        'keyword': 'тест',
-        'links': ['https://duckduckgo.com']
-    }
-]
+    
     return jsonify(results)
 
 if __name__ == '__main__':
