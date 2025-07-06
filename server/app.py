@@ -68,7 +68,7 @@ def parse():
             'keyword': keyword,
             'links': combined_links
         })
-
+    print("Results to return:", results)
     return jsonify(results)
 
 if __name__ == '__main__':
