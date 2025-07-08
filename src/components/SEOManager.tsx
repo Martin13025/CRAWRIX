@@ -15,7 +15,7 @@ const SEOManager: React.FC<SEOManagerProps> = ({ language }) => {
           "Crawrix is a tool for SEO analysis and keyword parsing to improve your website's visibility."
         );
     } else if (language === "es") {
-      document.title = "Crawrix — Herramienta AI para SEO y Análisis de Palabras Clave";
+      document.title = "Crawrix — Herramienta para SEO y Análisis de Palabras Clave";
       document
         .querySelector('meta[name="description"]')
         ?.setAttribute(
