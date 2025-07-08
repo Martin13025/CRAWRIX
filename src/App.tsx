@@ -5,6 +5,7 @@ import AggressiveModeToggle from "./components/AggressiveModeToggle";
 import RightClickHandler from "./components/RightClickHandler";
 import ResultList from "./components/ResultList";
 import LanguageToggle from "./components/LanguageToggle";
+import SEOManager from "./components/SEOManager";
 import KeywordInput from "./components/KeywordInput";
 import SubmitButton from "./components/SubmitButton";
 import Modal from "./components/Modal";
