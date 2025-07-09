@@ -190,8 +190,7 @@ return (
         <LanguageToggle language={language} toggleLanguage={toggleLanguage} />
       )}
     </div>
-
-   
+    
     <div className="seo-wrapper">
       <section className="seo-description">
         <h3>{t.modalTitle}</h3>
@@ -206,4 +205,3 @@ return (
 };
 
 export default App;
-
