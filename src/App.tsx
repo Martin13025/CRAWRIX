@@ -76,7 +76,8 @@ const App: React.FC = () => {
 
   const t = translations[language];
 
-  return (
+return (
+  <>
     <div className={`App ${aggressiveMode ? "aggressive-mode" : ""}`}>
       <div className="attention-window">
         {t.attentionwindow}
@@ -124,17 +125,9 @@ const App: React.FC = () => {
       <hr />
       
       <button onClick={toggleModal} className="modal-toggle-button">
-        {isModalOpen ? t.modalTitle : t.modalTitle}
+        {t.modalTitle}
       </button>
-      {/* ---------------------- 
-      <section className="seo-description">
-        <h3>{t.modalTitle}</h3>
-        <p>{t.modalContent}</p>
 
-        <h4>{t.supportTitle}</h4>
-        <p>{t.supportContent}</p>
-      </section>
-       ---------------------- */}
       <div className="footer">
         <div className="footer-left">v 1.4.2</div>
         <div className="footer-center">
@@ -196,19 +189,20 @@ const App: React.FC = () => {
       {!result && (
         <LanguageToggle language={language} toggleLanguage={toggleLanguage} />
       )}
-    {/* ----------------------*/}
-      <div className="seo-wrapper">
-        <section className="seo-description">
-          <h3>{t.modalTitle}</h3>
-          <p>{t.modalContent}</p>
-
-          <h4>{t.supportTitle}</h4>
-          <p>{t.supportContent}</p>
-        </section>
-      </div>
-    {/* ----------------------*/}
     </div>
-  );
+
+   
+    <div className="seo-wrapper">
+      <section className="seo-description">
+        <h3>{t.modalTitle}</h3>
+        <p>{t.modalContent}</p>
+
+        <h4>{t.supportTitle}</h4>
+        <p>{t.supportContent}</p>
+      </section>
+    </div>
+  </>
+);
 };
 
 export default App;
