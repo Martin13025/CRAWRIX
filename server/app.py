@@ -8,6 +8,13 @@ from urllib.parse import urlparse, parse_qs
 app = Flask(__name__)
 CORS(app, origins=["http://localhost:5173", "https://crawllab-frontend.onrender.com", "https://crawrix.com", "https://www.crawrix.com"])
 
+@app.before_request
+def redirect_www_to_root():
+    host = request.host
+    if host.startswith("www."):
+        url = request.url.replace("//www.", "//", 1)
+        return redirect(url, code=301)
+        
 def parse_duckduckgo(keyword, lang):
     url = f"https://duckduckgo.com/html/?q={keyword}&kl={lang}-es" if lang == 'es' else f"https://duckduckgo.com/html/?q={keyword}&kl={lang}-en"
     headers = {'User-Agent': 'Mozilla/5.0'}
