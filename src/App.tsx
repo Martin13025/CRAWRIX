@@ -198,6 +198,41 @@ return (
 
         <h4>{t.supportTitle}</h4>
         <p>{t.supportContent}</p>
+
+        <div className="crypto-box">
+          <p>
+            [USDT - TRC20 | Tron] - TCorTf3kgUsp8bmvVs1coVqsCfnmNgJEJK
+          </p>
+          <hr />
+          <p>
+            [BTC - COIN | Bitcoin] - bc1qaj7nhjsanmynp3zsk8amdfdfgwms3n9hzv0ezh
+          </p>
+        </div>
+
+        <h3>{t.connectTitle}</h3>
+        <div className="social-icons">
+          <a
+            href="https://linkedin.com/in/martin-daniels-a6b2b7269"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a
+            href="https://github.com/Martin13025"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <i className="fab fa-github"></i> GitHub
+        </a>
+        <a
+          href="https://t.me/M2rR4b4t"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+            <i className="fab fa-telegram"></i> Telegram
+          </a>
+        </div>
       </section>
     </div>
   </>
