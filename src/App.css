@@ -282,10 +282,15 @@ h2 {
   white-space: normal;
 }
 /*------------------------------------------------*/
+.seo-wrapper {
+  margin-top: 100vh;
+  padding-bottom: 60px;
+}
+
 .seo-description {
   background-color: #1a1a1a;
   padding: 40px 20px;
-  margin-top: 50vh;
+  margin-top: 60px;
   border-top: 1px solid var(--primary-color);
   color: #ddd;
   font-family: var(--font-family, sans-serif);
