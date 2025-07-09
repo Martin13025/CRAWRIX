@@ -197,15 +197,15 @@ const App: React.FC = () => {
         <LanguageToggle language={language} toggleLanguage={toggleLanguage} />
       )}
     {/* ----------------------*/}
-    <div className="seo-wrapper">
-      <section className="seo-description">
-        <h3>{t.modalTitle}</h3>
-        <p>{t.modalContent}</p>
+      <div className="seo-wrapper">
+        <section className="seo-description">
+          <h3>{t.modalTitle}</h3>
+          <p>{t.modalContent}</p>
 
-        <h4>{t.supportTitle}</h4>
-        <p>{t.supportContent}</p>
-      </section>
-    </div>
+          <h4>{t.supportTitle}</h4>
+          <p>{t.supportContent}</p>
+        </section>
+      </div>
     {/* ----------------------*/}
     </div>
   );
