@@ -8,6 +8,12 @@ from urllib.parse import urlparse, parse_qs
 app = Flask(__name__)
 CORS(app, origins=["http://localhost:5173", "https://crawllab-frontend.onrender.com", "https://crawrix.com", "https://www.crawrix.com"])
 
+
+@app.route("/ping")
+def ping():
+    return "pong", 200
+
+
 @app.before_request
 def redirect_www_to_root():
     host = request.host
