@@ -122,10 +122,22 @@ const App: React.FC = () => {
       )}
 
       <hr />
+      
       <button onClick={toggleModal} className="modal-toggle-button">
         {isModalOpen ? t.modalTitle : t.modalTitle}
       </button>
+      {/* ---------------------- */}
+      <section className="seo-description">
+        <h3>{t.modalTitle}</h3>
+        <p>{t.modalContent}</p>
 
+        <h4>{t.supportTitle}</h4>
+        <p>{t.supportContent}</p>
+      </section>
+      
+      <hr />
+      
+      {/* ---------------------- */}
       <div className="footer">
         <div className="footer-left">v 1.4.2</div>
         <div className="footer-center">
