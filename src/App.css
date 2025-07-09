@@ -281,7 +281,64 @@ h2 {
   word-break: break-all;
   white-space: normal;
 }
+/*------------------------------------------------*/
+.seo-description {
+  background-color: #1a1a1a;
+  padding: 40px 20px;
+  margin-top: 60px;
+  border-top: 1px solid var(--primary-color);
+  color: #ddd;
+  font-family: var(--font-family, sans-serif);
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+}
 
+.seo-description h3,
+.seo-description h4 {
+  color: #ffcc00;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.seo-description p {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.seo-description .crypto-box {
+  border: 2px solid gold;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(255, 215, 0, 0.1);
+  word-break: break-all;
+  white-space: normal;
+  margin-top: 10px;
+}
+
+.seo-description .social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.seo-description .social-icons a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffcc00;
+  font-size: 18px;
+  transition: color var(--transition, 0.3s ease);
+}
+
+.seo-description .social-icons a:hover {
+  color: #0011ff;
+}
+/*------------------------------------------------*/
 .footer {
   position: fixed;
   bottom: 0;
