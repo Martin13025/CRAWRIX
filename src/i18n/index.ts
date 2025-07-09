@@ -24,7 +24,7 @@ type Translation = {
   export const translations: Translations = {
     en: {
       title: "Crawrix",
-      subheading: "Look for everything MORE you need",
+      subheading: "Look for everything you need",
       placeholder: "Enter keywords (separated by commas)",
       placetext: "Enter keywords",
       parseButton: "Parse",
