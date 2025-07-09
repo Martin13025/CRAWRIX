@@ -44,7 +44,7 @@ type Translation = {
     },
     es: {
       title: "Crawrix",
-      subheading: "Busca todo lo que MÁS necesitas",
+      subheading: "Busca todo lo que necesitas",
       placeholder: "Ingresa palabras clave (separadas por comas)",
       placetext: "Ingresa palabras",
       parseButton: "Parsear",
