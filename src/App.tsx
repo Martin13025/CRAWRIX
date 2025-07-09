@@ -135,8 +135,6 @@ const App: React.FC = () => {
         <p>{t.supportContent}</p>
       </section>
       
-      <hr />
-      
       {/* ---------------------- */}
       <div className="footer">
         <div className="footer-left">v 1.4.2</div>
