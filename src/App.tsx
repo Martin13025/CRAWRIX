@@ -196,7 +196,9 @@ const App: React.FC = () => {
       {!result && (
         <LanguageToggle language={language} toggleLanguage={toggleLanguage} />
       )}
-      {/* ----------------------*/}
+      
+    </div>
+    {/* ----------------------*/}
       <section className="seo-description">
         <h3>{t.modalTitle}</h3>
         <p>{t.modalContent}</p>
@@ -204,8 +206,7 @@ const App: React.FC = () => {
         <h4>{t.supportTitle}</h4>
         <p>{t.supportContent}</p>
       </section>
-      {/* ----------------------*/}
-    </div>
+    {/* ----------------------*/}
   );
 };
 
