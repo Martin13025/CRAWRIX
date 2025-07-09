@@ -20,9 +20,8 @@ body {
 }
 
 .App {
-  margin-top: 5vh;
+  margin: 5vh auto 0 auto;
   max-width: 800px;
-  margin: 0 auto;
   padding: 20px;
   text-align: center;
   background-color: var(--background-color);
