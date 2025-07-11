@@ -33,7 +33,7 @@ export const translations: Translations = {
     results: "Results:",
     noLinks: "No links found",
     backButton: "Back to Search",
-    modalTitle: "About this service",
+    modalTitle: "changelog 🗃",
     modalContent:
       "Crawrix is a tool designed to simplify your SEO analysis and improve your online visibility. It helps you discover relevant links based on keywords you provide, making it an essential tool for SEO specialists, content creators, and digital marketers.",
     supportTitle: "Support the developer",
@@ -85,7 +85,7 @@ GitHub Updates 🏗
     results: "Resultados:",
     noLinks: "No se encontraron enlaces",
     backButton: "Volver a la búsqueda",
-    modalTitle: "Sobre este servicio",
+    modalTitle: "changelog 🗃",
     modalContent:
       "Crawrix es una herramienta diseñada para simplificar tu análisis SEO y mejorar tu visibilidad en línea. Te ayuda a descubrir enlaces relevantes según las palabras clave que proporcionas, siendo una herramienta esencial para especialistas SEO, creadores de contenido y comercializadores digitales.",
     supportTitle: "Apoya al desarrollador",
