@@ -221,15 +221,8 @@ h2 {
   bottom: -100%;
   left: 0;
   right: 0;
-  top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   transition: bottom 0.7s ease-in-out;
-  overflow-y: auto;
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 5vh 20px; 
 }
 
 .modal-overlay.open {
@@ -237,11 +230,11 @@ h2 {
 }
 
 .modal-content {
+  position: relative;
   background: var(--background-color);
   padding: 20px;
   max-width: 600px;
-  width: 100%;
-  max-height: 90vh;
+  margin: 0 auto;
   border-radius: var(--border-radius);
   box-shadow: 0 0px 6px var(--primary-color);
   overflow-y: auto;
@@ -255,11 +248,7 @@ h2 {
   cursor: pointer;
   border-radius: 2px;
 }
-
-.modal-close-bar:hover {
-  background-color: #fffb00;
-}
-
+/*------------------------------------------------*/
 .social-icons {
   display: flex;
   gap: 15px;
@@ -278,7 +267,7 @@ h2 {
 .social-icons a:hover {
   color: #0011ff;
 }
-/*------------------------------------------------*/
+
 .crypto-box {
   border: 2px solid gold;
   padding: 10px;
