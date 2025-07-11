@@ -143,7 +143,7 @@ return (
               <>
                 <section>
                   <h1>Changelog 🚀</h1>
-                  <pre style={{ whiteSpace: "pre-wrap", fontFamily: "inherit" }}>
+                  <pre style={{ whiteSpace: "pre-wrap", fontFamily: "inherit", textAlign: "left" }}>
                     {t.changelogContent}
                   </pre>
                 </section>
