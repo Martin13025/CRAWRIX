@@ -139,7 +139,6 @@ return (
         <Modal
           isOpen={isModalOpen}
           closeModal={closeModal}
-          title={t.modalTitle}
           content={
               <>
                 <section>
