@@ -223,10 +223,14 @@ h2 {
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
   transition: bottom 0.7s ease-in-out;
+  bottom: -100%;  
+  overflow: hidden;
+  z-index: 999;
 }
 
 .modal-overlay.open {
   bottom: 0;
+  overflow: auto;
 }
 
 .modal-content {
@@ -238,6 +242,7 @@ h2 {
   border-radius: var(--border-radius);
   box-shadow: 0 0px 6px var(--primary-color);
   overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .modal-close-bar {
