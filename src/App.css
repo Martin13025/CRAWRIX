@@ -229,6 +229,8 @@ h2 {
   transition: transform 0.8s ease, opacity 0.8s ease;
   overflow: hidden; 
   z-index: 999;
+  align-items: flex-start;
+  padding-top: 50px;
 }
 
 .modal-overlay.open {
