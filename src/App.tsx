@@ -125,7 +125,7 @@ return (
       <hr />
       
       <button onClick={toggleModal} className="modal-toggle-button">
-        {t.modalTitle}
+        {t.changelogButton}
       </button>
 
       <div className="footer">
