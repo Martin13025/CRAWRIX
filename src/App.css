@@ -233,7 +233,7 @@ h2 {
   position: relative;
   background: var(--background-color);
   padding: 20px;
-  max-width: 600px;
+  max-width: 80vh;
   margin: 0 auto;
   border-radius: var(--border-radius);
   box-shadow: 0 0px 6px var(--primary-color);
