@@ -16,6 +16,7 @@ type Translation = {
   normalModeText: string;
   attentionwindow: string;
   changelogContent: string;
+  changelogButton: string;
 };
 
 type Translations = {
@@ -33,7 +34,7 @@ export const translations: Translations = {
     results: "Results:",
     noLinks: "No links found",
     backButton: "Back to Search",
-    modalTitle: "changelog 🗃",
+    modalTitle: "About the service",
     modalContent:
       "Crawrix is a tool designed to simplify your SEO analysis and improve your online visibility. It helps you discover relevant links based on keywords you provide, making it an essential tool for SEO specialists, content creators, and digital marketers.",
     supportTitle: "Support the developer",
@@ -75,6 +76,7 @@ GitHub Updates 🏗
 - Initialized and pushed project to GitHub with proper setup.
 - Used feature branches and Pull Requests for development workflow.
     `,
+    changelogButton: "changelog 📦", 
   },
   es: {
     title: "Crawrix",
@@ -85,7 +87,7 @@ GitHub Updates 🏗
     results: "Resultados:",
     noLinks: "No se encontraron enlaces",
     backButton: "Volver a la búsqueda",
-    modalTitle: "changelog 🗃",
+    modalTitle: "Sobre el servicio",
     modalContent:
       "Crawrix es una herramienta diseñada para simplificar tu análisis SEO y mejorar tu visibilidad en línea. Te ayuda a descubrir enlaces relevantes según las palabras clave que proporcionas, siendo una herramienta esencial para especialistas SEO, creadores de contenido y comercializadores digitales.",
     supportTitle: "Apoya al desarrollador",
@@ -127,5 +129,6 @@ GitHub Updates 🏗
 - Proyecto inicializado y subido a GitHub con configuración adecuada.
 - Uso de ramas y Pull Requests para flujo de desarrollo.
     `,
+    changelogButton: "registro de cambios 📦",
   },
 };
