@@ -526,17 +526,3 @@ h2 {
     font-size: 14px;
   }
 }
-
-.attention-window {
-  border: 1px solid #f44336;
-  background-color: #000000;
-  color: #d32f2f;
-  font-size: 14px;
-  font-weight: 300;
-  padding: 12px;
-  border-radius: 6px;
-  margin: 20px auto; 
-  box-sizing: border-box;
-  max-width: 420px;
-  width: 100%;
-}
