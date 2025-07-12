@@ -8,6 +8,29 @@ If you intend to use this software (or its significant parts) in a commercial co
 
 # Changelog 🚀
 
+## 📦 v1.5.2 – SEO & Analytics Enhancements
+
+### 🛠 Infrastructure
+* 📄 Updated `robots.txt`:
+  ```txt
+  User-agent: *
+  Allow: /
+  Sitemap: https://crawrix.com/sitemap.xml
+  ```
+* 🗺️ Filled and activated `sitemap.xml`
+* 🔍 Connected **Google Search Console**
+* 🧠 Integrated **Google Tag Manager** and **Google Analytics**
+* 🔁 Implemented **301 redirect** logic
+
+### 🔧 SEO Optimization
+* 🧩 Added `SEOManager.tsx` component
+* 🧠 Updated `<head>` with proper meta tags (title, description, OG, Twitter, etc.)
+* 🖼️ Added SEO-optimized favicons and social icons
+
+### 💬 UI / UX
+* 🗒️ Introduced a **changelog modal** in the interface
+* 🚫 Removed the temporary hosting warning message
+
 ## v1.4.2 💥- Patch
 ### 🐛 Fixed
 - Checked and updated `robots.txt`.
@@ -23,7 +46,7 @@ If you intend to use this software (or its significant parts) in a commercial co
 
 - **The project has been renamed to something more recognizable - Crawrix**
 
-## v1.4.0 🌎
+## v1.4.0 🌎 - Full Stack Launch & Mobile Readiness
 
 - **✅ Deployed the full-stack application to Render:**
   - Frontend (React) and backend (Python on Flask) are now live and publicly accessible.
@@ -38,11 +61,11 @@ If you intend to use this software (or its significant parts) in a commercial co
   - Maintained structured commit history throughout development.
   - Project managed via a local Git repository.
 
-## v1.3.0 ✨
+## v1.3.0 ✨– Component Refactor & UI Polish
 - **Refactored the application into microservices (components)** for better maintainability and performance.
 - **Improved text styling** for enhanced readability and appearance. 🎨
 
-## v1.2.0 🌍
+## v1.2.0 🌍 - Multilingual Support & Logic Cleanup
 - **Implemented translations**:
   - Added support for **English & Spanish** via `src/i18n/index.ts`.
   - Adjusted text dynamically based on the selected language.
@@ -54,7 +77,7 @@ If you intend to use this software (or its significant parts) in a commercial co
   - Improved state management for language selection and aggressive mode.
   - Optimized API calls to prevent redundant requests.
 
-## v1.1.0 🛠
+## v1.1.0 🛠 – UI Enhancements & Parsing Features
 - **New UI Enhancements**:
   - Added a **button to toggle a modal window** with project details.
   - Improved user interface with **hints and navigation options**.
@@ -75,8 +98,5 @@ If you intend to use this software (or its significant parts) in a commercial co
   - Pushed changes to a separate feature branch.
   - Created a Pull Request (PR) to merge into `main`.
   - Prepared for final merging and deployment.
-
-
 ---
-
 📌 *Stay tuned for more updates!* 🚀
