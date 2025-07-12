@@ -148,9 +148,9 @@ return (
             }
         />
       </div>
-
-
+      
       <hr />
+      
       {!result && (
         <LanguageToggle language={language} toggleLanguage={toggleLanguage} />
       )}
