@@ -43,6 +43,21 @@ export const translations: Translations = {
     aggressiveModeText: "Look for everything MORE you need",
     normalModeText: "Look for everything you need",
     changelogContent: `
+v1.5.2 📦 – SEO & Analytics Enhancements
+Updated robots.txt:
+- User-agent: *
+  Allow: /
+  Sitemap: https://crawrix.com/sitemap.xml
+- Filled and activated sitemap.xml
+- Connected Google Search Console
+- Integrated Google Tag Manager and Google Analytics
+- Implemented 301 redirect logic
+- Added SEOManager.tsx component
+- Updated <head> with proper meta tags (title, description, OG, Twitter, etc.)
+- Added SEO-optimized favicons and social icons
+- Introduced a changelog modal in the interface
+- Removed the temporary hosting warning message
+
 v1.4.2 💥 - Patch
 - Fixed and updated robots.txt.
 - Added attention window.
@@ -94,6 +109,21 @@ GitHub Updates 🏗
     aggressiveModeText: "Busca todo lo que MÁS necesitas",
     normalModeText: "Busca todo lo que necesitas",
     changelogContent: `
+v1.5.2 📦 – Mejoras de SEO y análisis
+Actualizados robots.txt:
+- Agente de usuario: *
+  Permitir: /
+  Mapa del sitio: https://crawrix.com/sitemap.xml
+- Mapa del sitio rellenado y activado.xml
+- Consola de Búsqueda de Google Conectada
+- Administrador integrado de Etiquetas de Google y Google Analytics
+- Implementó lógica de redireccionamiento 301
+- Añadido SEOManager.componente tsx
+- Actualizado < head > con metaetiquetas adecuadas (título, descripción, OG, Twitter, etc.)
+- Se agregaron favicons e íconos sociales optimizados para SEO
+- Introdujo un modal de registro de cambios en la interfaz
+- Eliminado el mensaje de advertencia de alojamiento temporal
+
 v1.4.2 💥 - Patch
 - Se corrigió y actualizó robots.txt.
 - Se agregó ventana de atención.
