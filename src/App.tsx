@@ -78,6 +78,7 @@ const App: React.FC = () => {
 
 return (
   <>
+    <SEOManager language={language} />
     <div className={`App ${aggressiveMode ? "aggressive-mode" : ""}`}>
       <h1>{t.title}</h1>
       <h2 className="rainbow-text">
