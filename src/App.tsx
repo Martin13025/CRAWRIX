@@ -127,7 +127,7 @@ return (
       </button>
 
       <div className="footer">
-        <div className="footer-left">v 1.5.2</div>
+        <div className="footer-left">v 2.0.0</div>
         <div className="footer-center">
           All rights reserved. Developer: Martin Daniels.
         </div>
