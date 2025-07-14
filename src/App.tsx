@@ -175,7 +175,7 @@ return (
           </p>
         </div>
 
-        <h3>{t.connectTitle}</h3>
+        <h4>{t.connectTitle}</h4>
         <div className="social-icons">
           <a
             href="https://linkedin.com/in/martin-daniels-a6b2b7269"
