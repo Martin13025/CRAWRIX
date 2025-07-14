@@ -8,7 +8,62 @@ If you intend to use this software (or its significant parts) in a commercial co
 
 # Changelog 🚀
 
-## 📦 v1.5.2 – SEO & Analytics Enhancements
+## 🌀 GRAND UPDATE v2.0.0
+
+## 🔍 What’s Changed?
+
+### Security Improvements:
+
+* **Implemented URL safety validation**:
+
+  * Blocked private IP ranges (`192.168.x.x`, `10.x.x.x`, `172.16.x.x`).
+  * Blocked localhost addresses (`127.0.0.1`, `localhost`, `::1`).
+  * Blocked reserved, loopback, and multicast IPs.
+  * Allowed only `http` and `https` URL schemes.
+
+* **Added Input Validation**:
+
+  * `keywords` must be a list.
+  * Limited to **10 keywords per request**.
+  * Each keyword must be a **string** and **no longer than 50 characters**.
+
+* **Added Error Handling**:
+
+  * All HTTP requests are wrapped with `try-except` to catch connection and parsing issues.
+  * Prevented unexpected crashes if DuckDuckGo or Yahoo changes their page structure.
+
+* **Added Request Rate Limiting**:
+
+  * **Global** limit: **10 requests per minute**.
+  * **/parse endpoint**: **5 requests per minute**.
+
+### Technical Stack Used:
+
+| Feature         | Library               | Purpose                               |
+| --------------- | --------------------- | ------------------------------------- |
+| SSRF Protection | `ipaddress`, `urllib` | Block unsafe network targets          |
+| Rate Limiting   | `Flask-Limiter 3.12`  | Prevent DoS / abuse attacks           |
+| HTML Parsing    | `BeautifulSoup`       | Safe scraping of search results       |
+| HTTP Requests   | `requests`            | External requests with error handling |
+| CORS Handling   | `flask_cors`          | Control allowed client origins        |
+
+## 🧪 Testing
+
+* Verified SSRF protection with safe and unsafe URLs (e.g., private IPs, localhost).
+* Simulated search engine structure changes to ensure graceful failure.
+* Tested rate limiting behavior by sending rapid requests.
+* Validated keyword input constraints and error messages.
+
+## 💬 Additional Notes
+
+Reviewers should focus on:
+
+* URL safety logic correctness.
+* Rate limiting thresholds.
+* Keyword validation constraints.
+* Error message consistency for client-side handling.
+
+## v1.5.2 📦 – SEO & Analytics Enhancements
 
 ### 🛠 Infrastructure
 * 📄 Updated `robots.txt`:
