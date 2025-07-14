@@ -43,52 +43,27 @@ export const translations: Translations = {
     aggressiveModeText: "Look for everything MORE you need",
     normalModeText: "Look for everything you need",
     changelogContent: `
-v1.5.2 📦 – SEO & Analytics Enhancements
-Updated robots.txt:
-- User-agent: *
-  Allow: /
-  Sitemap: https://crawrix.com/sitemap.xml
-- Filled and activated sitemap.xml
-- Connected Google Search Console
-- Integrated Google Tag Manager and Google Analytics
-- Implemented 301 redirect logic
-- Added SEOManager.tsx component
-- Updated <head> with proper meta tags (title, description, OG, Twitter, etc.)
-- Added SEO-optimized favicons and social icons
-- Introduced a changelog modal in the interface
-- Removed the temporary hosting warning message
-
-v1.4.2 💥 - Patch
-- Fixed and updated robots.txt.
-- Added attention window.
-- Updated web app icon.
-
-v1.4.1 🔄 - Patch
-- Project renamed to Crawrix.
-
-v1.4.0 🌎
-- Deployed full-stack app on Render (React frontend + Flask backend).
-- Improved mobile responsiveness.
-- Used Git for version control and commit management.
-
-v1.3.0 ✨
-- Refactored into microservices for better maintainability and performance.
-- Improved text styling.
-
-v1.2.0 🌍
-- Added English and Spanish language support.
-- Fixed translation bugs and optimized API calls.
-
-v1.1.0 🛠
-- New UI enhancements: modal with project details, hints, and navigation.
-- Display of parsing results.
-- Updated button and modal styles.
-
-GitHub Updates 🏗
-- Initialized and pushed project to GitHub with proper setup.
-- Used feature branches and Pull Requests for development workflow.
+🌀 GRAND UPDATE v2.0.0
+- 🔍 What’s Changed?
+  Security: Added URL validation blocking private IPs, localhost, reserved, loopback, multicast, and non-http(s) schemes.
+  Input Validation: Keywords must be a list of max 10 items, each max 50 chars.
+  Error Handling: Wrapped HTTP requests with try-except to prevent crashes on connection or parsing issues.
+  Rate Limiting: Global 10 req/min, /parse endpoint limited to 5 req/min.
+- 🧰 Tech Stack:
+  ipaddress, urllib — SSRF protection
+  Flask-Limiter — rate limiting
+  BeautifulSoup — HTML parsing
+  requests — HTTP requests
+  flask_cors — CORS management
+- 🧪 Testing:
+  Verified SSRF protection on various URLs
+  Simulated page structure changes for robustness
+  Confirmed rate limiting works
+  Validated input constraints and error messages
+- 💬 Notes:
+  Focus on URL validation, rate limits, input checks, and consistent error responses.
     `,
-    changelogButton: "changelog 📦", 
+    changelogButton: "latest update 📦", 
   },
   es: {
     title: "Crawrix",
@@ -109,51 +84,26 @@ GitHub Updates 🏗
     aggressiveModeText: "Busca todo lo que MÁS necesitas",
     normalModeText: "Busca todo lo que necesitas",
     changelogContent: `
-v1.5.2 📦 – Mejoras de SEO y análisis
-Actualizados robots.txt:
-- Agente de usuario: *
-  Permitir: /
-  Mapa del sitio: https://crawrix.com/sitemap.xml
-- Mapa del sitio rellenado y activado.xml
-- Consola de Búsqueda de Google Conectada
-- Administrador integrado de Etiquetas de Google y Google Analytics
-- Implementó lógica de redireccionamiento 301
-- Añadido SEOManager.componente tsx
-- Actualizado < head > con metaetiquetas adecuadas (título, descripción, OG, Twitter, etc.)
-- Se agregaron favicons e íconos sociales optimizados para SEO
-- Introdujo un modal de registro de cambios en la interfaz
-- Eliminado el mensaje de advertencia de alojamiento temporal
-
-v1.4.2 💥 - Patch
-- Se corrigió y actualizó robots.txt.
-- Se agregó ventana de atención.
-- Se actualizó el ícono de la aplicación web.
-
-v1.4.1 🔄 - Patch
-- El proyecto fue renombrado a Crawrix.
-
-v1.4.0 🌎
-- Aplicación full-stack desplegada en Render (frontend React + backend Flask).
-- Mejorada la capacidad de respuesta móvil.
-- Uso de Git para control de versiones y gestión de commits.
-
-v1.3.0 ✨
-- Refactorizado en microservicios para mejor mantenibilidad y rendimiento.
-- Mejorado el estilo del texto.
-
-v1.2.0 🌍
-- Añadido soporte para inglés y español.
-- Corregidos errores de traducción y optimizadas llamadas API.
-
-v1.1.0 🛠
-- Nuevas mejoras UI: modal con detalles del proyecto, pistas y navegación.
-- Visualización de resultados del parsing.
-- Actualizados estilos de botones y modales.
-
-GitHub Updates 🏗
-- Proyecto inicializado y subido a GitHub con configuración adecuada.
-- Uso de ramas y Pull Requests para flujo de desarrollo.
+🌀 GRAN ACTUALIZACIÓN v2.0.0
+- 🔍 ¿Qué ha cambiado?
+  Seguridad: Se ha añadido validación de URL que bloquea IP privadas, localhost, reservadas, loopback, multicast y esquemas que no sean HTTP.
+  Validación de entrada: Las palabras clave deben ser una lista de un máximo de 10 elementos, cada uno con un máximo de 50 caracteres.
+  Gestión de errores: Se han encapsulado las solicitudes HTTP con try-except para evitar fallos de conexión o problemas de análisis.
+  Límite de velocidad: Global: 10 solicitudes/min; punto final /parse: limitado a 5 solicitudes/min. 
+- 🧰 Pila tecnológica:
+  ipaddress, urllib — Protección SSRF
+  Flask-Limiter — Limitación de velocidad
+  BeautifulSoup — Análisis de HTML
+  requests — Solicitudes HTTP
+  flask_cors — Gestión de CORS
+- 🧪 Pruebas:
+  Protección SSRF verificada en varias URL
+  Simulación de cambios en la estructura de la página para mayor robustez
+  Funcionamiento de la limitación de velocidad confirmado
+  Restricciones de entrada y mensajes de error validados
+- 💬 Notas:
+  Enfoque en la validación de URL, límites de velocidad, comprobaciones de entrada y respuestas de error consistentes.
     `,
-    changelogButton: "registro de cambios 📦",
+    changelogButton: "última actualización 📦",
   },
 };
