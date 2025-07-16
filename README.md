@@ -1,7 +1,5 @@
 # Commercial Use ⚠
 
-This project is licensed under the Apache License 2.0 + Commons Clause Restriction.
-
 ⚠️ This project is provided under Apache 2.0 + Commons Clause.
 Commercial use is strictly prohibited without written permission from the author.
 
