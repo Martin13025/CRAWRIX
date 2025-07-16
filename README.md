@@ -1,6 +1,6 @@
 # Commercial Use ⚠
 
-This project is licensed under the Apache License Version 2.0.
+This project is licensed under the Apache License 2.0 + Commons Clause Restriction.
 
 If you intend to use this software (or its significant parts) in a commercial context — including SaaS platforms, reselling, or integrating into a paid product — please contact the author.
 
