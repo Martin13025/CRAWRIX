@@ -6,7 +6,6 @@ import ipaddress
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
-import time
 
 app = Flask(__name__)
 CORS(
@@ -22,7 +21,7 @@ CORS(
 limiter = Limiter(
     get_remote_address,
     app=app,
-    default_limits=["10 per minute"],
+    default_limits=["10 per minute"], 
     storage_uri="memory://",
 )
 
@@ -118,7 +117,7 @@ def parse_yahoo(keyword):
 
 
 @app.route("/parse", methods=["POST"])
-@limiter.limit("5 per minute")
+@limiter.limit("10 per minute")  # увеличил лимит и тут
 def parse():
     keywords = request.json.get("keywords", [])
     if not isinstance(keywords, list):
@@ -132,11 +131,7 @@ def parse():
         if not isinstance(keyword, str) or len(keyword) > 50:
             return jsonify({"error": "Keywords must be strings not longer than 50 symbols"}), 400
         bing_links = parse_bing(keyword)
-        time.sleep(5) 
-        yahoo_links = []
-        if aggressive_mode:
-            yahoo_links = parse_yahoo(keyword)
-            time.sleep(5)  
+        yahoo_links = parse_yahoo(keyword) if aggressive_mode else []
 
         combined_links = list(set(bing_links + yahoo_links))[:15]
 
@@ -146,4 +141,6 @@ def parse():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
+
+
 
