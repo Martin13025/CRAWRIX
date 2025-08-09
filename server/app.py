@@ -5,8 +5,8 @@ from flask_limiter.util import get_remote_address
 import ipaddress
 import requests
 from bs4 import BeautifulSoup
-from urllib.parse import urlparse, parse_qs
-
+from urllib.parse import urlparse
+import time
 
 app = Flask(__name__)
 CORS(
@@ -61,42 +61,42 @@ def is_safe_url(url: str) -> bool:
         return False
 
 
+session = requests.Session()
+
+
 def fetch_url_safe(url):
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0 Safari/537.36",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Referer": "https://bing.com/",
+    }
     if not is_safe_url(url):
         return {"error": "Unsafe URL detected"}
-    headers = {"User-Agent": "Mozilla/5.0"}
     try:
-        response = requests.get(url, headers=headers)
+        response = session.get(url, headers=headers, timeout=10)
         response.raise_for_status()
         return response.text
     except requests.exceptions.RequestException as e:
         return {"error": str(e)}
 
 
-def parse_duckduckgo(keyword, lang):
-    url = (
-        f"https://duckduckgo.com/html/?q={keyword}&kl={lang}-es"
-        if lang == "es"
-        else f"https://duckduckgo.com/html/?q={keyword}&kl={lang}-en"
-    )
+def parse_bing(keyword):
+    url = f"https://www.bing.com/search?q={keyword}"
     html = fetch_url_safe(url)
     if isinstance(html, dict) and "error" in html:
-        return html
+        print(f"Error fetching Bing for '{keyword}': {html['error']}")
+        return []
     soup = BeautifulSoup(html, "html.parser")
-    links = soup.find_all("a", class_="result__a")
-
+    links = soup.select("li.b_algo h2 a")
     full_links = []
     for link in links:
         href = link.get("href")
-        if href and href.startswith("//"):
-            parsed_url = urlparse(href)
-            query_params = parse_qs(parsed_url.query)
-            if "uddg" in query_params:
-                real_url = query_params["uddg"][0]
-                if is_safe_url(real_url):
-                    full_links.append(real_url)
+        if href and is_safe_url(href):
+            full_links.append(href)
         if len(full_links) >= 15:
             break
+    print(f"Keyword '{keyword}' - found {len(full_links)} links")
     return full_links
 
 
@@ -104,10 +104,9 @@ def parse_yahoo(keyword):
     url = f"https://search.yahoo.com/search?p={keyword}"
     html = fetch_url_safe(url)
     if isinstance(html, dict) and "error" in html:
-        return html
+        return []
     soup = BeautifulSoup(html, "html.parser")
     links = soup.select("h3.title a")
-
     full_links = []
     for link in links:
         href = link.get("href")
@@ -123,26 +122,23 @@ def parse_yahoo(keyword):
 def parse():
     keywords = request.json.get("keywords", [])
     if not isinstance(keywords, list):
-        return (
-            jsonify({"error": "Keywords must be a list"}),
-            400,
-        )
+        return jsonify({"error": "Keywords must be a list"}), 400
     if len(keywords) > 10:
-        return (
-            jsonify({"error": "Keywordslist must not exceed 10 keywords"}),
-            400,
-        )
-    lang = request.json.get("lang", "es")
+        return jsonify({"error": "Keywords list must not exceed 10 keywords"}), 400
     aggressive_mode = request.json.get("aggressive_mode", False)
     results = []
 
     for keyword in keywords:
         if not isinstance(keyword, str) or len(keyword) > 50:
-            return jsonify({"error": "Keywords are string and not longer 50 symbols"})
-        duckduckgo_links = parse_duckduckgo(keyword, lang)
-        yahoo_links = parse_yahoo(keyword) if aggressive_mode else []
+            return jsonify({"error": "Keywords must be strings not longer than 50 symbols"}), 400
+        bing_links = parse_bing(keyword)
+        time.sleep(10) 
+        yahoo_links = []
+        if aggressive_mode:
+            yahoo_links = parse_yahoo(keyword)
+            time.sleep(10)  
 
-        combined_links = list(set(duckduckgo_links + yahoo_links))[:15]
+        combined_links = list(set(bing_links + yahoo_links))[:15]
 
         results.append({"keyword": keyword, "links": combined_links})
     return jsonify(results)
