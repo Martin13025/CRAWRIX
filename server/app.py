@@ -132,11 +132,11 @@ def parse():
         if not isinstance(keyword, str) or len(keyword) > 50:
             return jsonify({"error": "Keywords must be strings not longer than 50 symbols"}), 400
         bing_links = parse_bing(keyword)
-        time.sleep(10) 
+        time.sleep(5) 
         yahoo_links = []
         if aggressive_mode:
             yahoo_links = parse_yahoo(keyword)
-            time.sleep(10)  
+            time.sleep(5)  
 
         combined_links = list(set(bing_links + yahoo_links))[:15]
 
@@ -146,3 +146,4 @@ def parse():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
+
