@@ -117,7 +117,7 @@ def parse_yahoo(keyword):
 
 
 @app.route("/parse", methods=["POST"])
-@limiter.limit("10 per minute")  # увеличил лимит и тут
+@limiter.limit("10 per minute")
 def parse():
     keywords = request.json.get("keywords", [])
     if not isinstance(keywords, list):
@@ -141,6 +141,7 @@ def parse():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
+
 
 
 
