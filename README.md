@@ -7,7 +7,39 @@ Commercial use is strictly prohibited without written permission from the author
 
 # Changelog 🚀
 
-## 🌀 GRAND UPDATE v2.0.0
+## 🪐GRAND UPDATE v3.0.0 – Changes Overview
+
+### Removed
+- Aggressive mode from both frontend and backend.
+- OpenLibrary API (no longer used for link fetching).
+- Any UI components related to aggressive mode (e.g., `AggressiveModeToggle` in React).
+- Yahoo search included only as a basic fallback; aggressive combined queries were removed.
+
+### Added
+- Integration with **Qwant API** (free search engine) for keyword-specific searches.
+- Integration with **Hacker News API** to fetch relevant posts.
+- Integration with **StackExchange API** to search questions and answers exactly matching keywords.
+- **DuckDuckGo, Bing, Wikipedia, Reddit** remain as search sources.
+- Frontend automatically sends keywords and language to backend without any aggressive mode parameters.
+- Exact keyword search for all APIs where possible to improve relevance.
+
+### Modified / Improved
+- Refactored backend to synchronous requests (removed async) to simplify fetching from multiple APIs.
+- Simplified frontend UI: removed aggressive mode toggle and related labels.
+- Improved URL safety checks:
+  - Validate scheme (`http/https`)
+  - Block private, reserved, loopback, multicast IPs
+  - Block localhost domains
+- Standardized maximum links per keyword to 15 across all sources.
+- Backend enforces keywords list ≤10 and keyword length ≤50 characters.
+- Added safer `requests.Session()` usage for all API calls.
+- Improved error handling for fetch failures (returns empty list instead of crashing).
+- Limiting API calls: 10 requests per minute per client IP via Flask-Limiter.
+- Frontend now sends only safe parameters (`keywords`, `lang`) and uses `Suspense` for lazy-loaded components.
+- Reduced dependency on IP for safety (more focus on URL validity and safe parsing).
+- All previous aggressive mode CSS / UI classes removed.
+
+## 🌀 GRAND UPDATE v2.0.0 – Changes Overview
 
 ## 🔍 What’s Changed?
 
