@@ -153,7 +153,8 @@ const App: React.FC = () => {
             <p>[USDT - TRC20 | Tron] - TCorTf3kgUsp8bmvVs1coVqsCfnmNgJEJK</p>
             <hr />
             <p>
-              [BTC - COIN | Bitcoin] - bc1qaj7nhjsanmynp3zsk8amdfdfgwms3n9hzv0ezh
+              [BTC - COIN | Bitcoin] -
+              bc1qaj7nhjsanmynp3zsk8amdfdfgwms3n9hzv0ezh
             </p>
           </div>
 
