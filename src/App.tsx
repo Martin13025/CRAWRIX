@@ -15,7 +15,7 @@ type Language = keyof typeof translations;
 const truncateLink = (link: string, maxLength = 50) =>
   link.length > maxLength ? link.substring(0, maxLength) + "..." : link;
 
-const API_URL = "http://localhost:5000/parse";
+const API_URL = "https://crawllab.onrender.com/parse";
 
 const App: React.FC = () => {
   const [keywords, setKeywords] = useState<string>("");
