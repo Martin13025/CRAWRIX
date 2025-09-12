@@ -2,7 +2,6 @@ type Translation = {
   title: string;
   subheading: string;
   placeholder: string;
-  placetext: string;
   parseButton: string;
   results: string;
   noLinks: string;
@@ -28,81 +27,149 @@ export const translations: Translations = {
     title: "Crawrix",
     subheading: "Look for everything you need",
     placeholder: "Enter keywords (separated by commas)",
-    placetext: "Enter keywords",
     parseButton: "Parse",
     results: "Results:",
     noLinks: "No links found",
     backButton: "Back to Search",
     modalTitle: "About the service",
     modalContent:
-      "Crawrix is a tool designed to simplify your SEO analysis and improve your online visibility. It helps you discover relevant links based on keywords you provide, making it an essential tool for SEO specialists, content creators, and digital marketers.",
+      "Crawrix is an all-in-one SEO tool designed to improve keyword analysis, discover relevant backlinks, and boost your online visibility. By simplifying link building and keyword research, Crawrix helps SEO specialists, content creators, and digital marketers save time, grow traffic, and achieve higher rankings in search engines.",
     supportTitle: "Support the developer",
     supportContent:
-      "If you find Crawrix useful and want to support the development of this tool, you can make a donation. Your support helps improve and expand this project, allowing us to add more features.",
+      "If you find Crawrix valuable and want to support its development, consider making a donation. Your contribution helps us improve the tool, release new features, and keep Crawrix growing for the SEO community.",
     connectTitle: "Connect with the developer",
     aggressiveModeText: "Look for everything MORE you need",
     normalModeText: "Look for everything you need",
     changelogContent: `
-🌀 GRAND UPDATE v2.0.0
-- 🔍 What’s Changed?
-  Security: Added URL validation blocking private IPs, localhost, reserved, loopback, multicast, and non-http(s) schemes.
-  Input Validation: Keywords must be a list of max 10 items, each max 50 chars.
-  Error Handling: Wrapped HTTP requests with try-except to prevent crashes on connection or parsing issues.
-  Rate Limiting: Global 10 req/min, /parse endpoint limited to 5 req/min.
-- 🧰 Tech Stack:
-  ipaddress, urllib — SSRF protection
-  Flask-Limiter — rate limiting
-  BeautifulSoup — HTML parsing
-  requests — HTTP requests
-  flask_cors — CORS management
-- 🧪 Testing:
-  Verified SSRF protection on various URLs
-  Simulated page structure changes for robustness
-  Confirmed rate limiting works
-  Validated input constraints and error messages
-- 💬 Notes:
-  Focus on URL validation, rate limits, input checks, and consistent error responses.
+    Version 3.0.0 – Changes Overview
+    - Removed
+
+    Aggressive mode from both frontend and backend.
+
+    OpenLibrary API (no longer used for link fetching).
+
+    Any UI components related to aggressive mode (e.g., AggressiveModeToggle in React).
+
+    Yahoo search included only as a basic fallback; aggressive combined queries were removed.
+
+    - Added
+
+    Integration with Qwant API (free search engine) for keyword-specific searches.
+
+    Integration with Hacker News API to fetch relevant posts.
+
+    Integration with StackExchange API to search questions and answers exactly matching keywords.
+
+    DuckDuckGo, Bing, Wikipedia, Reddit remain as search sources.
+
+    Frontend automatically sends keywords and language to backend without any aggressive mode parameters.
+
+    Exact keyword search for all APIs where possible to improve relevance.
+
+    - Modified / Improved
+
+    Refactored backend to synchronous requests (removed async) to simplify fetching from multiple APIs.
+
+    Simplified frontend UI: removed aggressive mode toggle and related labels.
+
+    Improved URL safety checks:
+
+    Validate scheme (http/https)
+
+    Block private, reserved, loopback, multicast IPs
+
+    Block localhost domains
+
+    Standardized maximum links per keyword to 15 across all sources.
+
+    Backend enforces keywords list <=10 and keyword length <=50 characters.
+
+    Added safer requests.Session() usage for all API calls.
+
+    Improved error handling for fetch failures (returns empty list instead of crashing).
+
+    Limiting API calls: 10 requests per minute per client IP via Flask-Limiter.
+
+    Frontend now sends only safe parameters (keywords, lang) and uses Suspense for lazy-loaded components.
+
+    Reduced dependency on IP for safety (more focus on URL validity and safe parsing).
+
+    All previous aggressive mode CSS / UI classes removed.
     `,
-    changelogButton: "latest update 📦", 
+    changelogButton: "latest update 📦",
   },
   es: {
     title: "Crawrix",
     subheading: "Busca todo lo que necesitas",
     placeholder: "Ingresa palabras clave (separadas por comas)",
-    placetext: "Ingresa palabras",
     parseButton: "Parsear",
     results: "Resultados:",
     noLinks: "No se encontraron enlaces",
     backButton: "Volver a la búsqueda",
     modalTitle: "Sobre el servicio",
-    modalContent:
-      "Crawrix es una herramienta diseñada para simplificar tu análisis SEO y mejorar tu visibilidad en línea. Te ayuda a descubrir enlaces relevantes según las palabras clave que proporcionas, siendo una herramienta esencial para especialistas SEO, creadores de contenido y comercializadores digitales.",
+    modalContent: `Crawrix es una herramienta SEO todo en uno diseñada para mejorar el análisis de palabras clave, descubrir backlinks relevantes y aumentar tu visibilidad online.
+    Al simplificar el link building y la investigación de palabras clave, Crawrix ayuda a especialistas en SEO, creadores de contenido y marketers digitales a ahorrar tiempo, aumentar el tráfico y lograr mejores posiciones en los motores de búsqueda.`,
     supportTitle: "Apoya al desarrollador",
     supportContent:
-      "Si encuentras útil Crawrix y deseas apoyar el desarrollo de esta herramienta, puedes hacer una donación. Tu apoyo ayuda a mejorar y expandir este proyecto, permitiéndonos agregar más funciones.",
+      "Si encuentras útil Crawrix y quieres apoyar su desarrollo, considera hacer una donación. Tu contribución nos ayuda a mejorar la herramienta, lanzar nuevas funciones y seguir haciendo crecer Crawrix para la comunidad SEO",
     connectTitle: "Conéctate con el desarrollador",
     aggressiveModeText: "Busca todo lo que MÁS necesitas",
     normalModeText: "Busca todo lo que necesitas",
     changelogContent: `
-🌀 GRAN ACTUALIZACIÓN v2.0.0
-- 🔍 ¿Qué ha cambiado?
-  Seguridad: Se ha añadido validación de URL que bloquea IP privadas, localhost, reservadas, loopback, multicast y esquemas que no sean HTTP.
-  Validación de entrada: Las palabras clave deben ser una lista de un máximo de 10 elementos, cada uno con un máximo de 50 caracteres.
-  Gestión de errores: Se han encapsulado las solicitudes HTTP con try-except para evitar fallos de conexión o problemas de análisis.
-  Límite de velocidad: Global: 10 solicitudes/min; punto final /parse: limitado a 5 solicitudes/min. 
-- 🧰 Pila tecnológica:
-  ipaddress, urllib — Protección SSRF
-  Flask-Limiter — Limitación de velocidad
-  BeautifulSoup — Análisis de HTML
-  requests — Solicitudes HTTP
-  flask_cors — Gestión de CORS
-- 🧪 Pruebas:
-  Protección SSRF verificada en varias URL
-  Simulación de cambios en la estructura de la página para mayor robustez
-  Funcionamiento de la limitación de velocidad confirmado
-  Restricciones de entrada y mensajes de error validados
-- 💬 Notas:
-  Enfoque en la validación de URL, límites de velocidad, comprobaciones de entrada y respuestas de error consistentes.
+    Versión 3.0.0 - Resumen de cambios
+    - Eliminado
+
+    Modo agresivo tanto desde el frontend como desde el backend.
+
+    API de OpenLibrary (ya no se usa para buscar enlaces).
+
+    Cualquier componente de la interfaz de usuario relacionado con el modo agresivo (por ejemplo, AggressiveModeToggle en React).
+
+    Yahoo search se incluyó solo como alternativa básica; se eliminaron las consultas combinadas agresivas.
+
+    - Añadido
+
+    Integración con la API de Qwant (motor de búsqueda gratuito) para búsquedas específicas de palabras clave.
+
+    Integración con Hacker News API para obtener publicaciones relevantes.
+
+    Integración con la API de StackExchange para buscar preguntas y respuestas que coincidan exactamente con las palabras clave.
+
+    DuckDuckGo, Bing, Wikipedia, Reddit permanecen como fuentes de búsqueda.
+
+    La interfaz envía automáticamente palabras clave e idioma al backend sin ningún parámetro de modo agresivo.
+
+    Búsqueda exacta de palabras clave para todas las API siempre que sea posible para mejorar la relevancia.
+
+    - Modificado / mejorado
+
+    Backend refactorizado para solicitudes síncronas (eliminado asíncrono) para simplificar la obtención de múltiples API.
+
+    Interfaz de usuario simplificada: se eliminó el interruptor de modo agresivo y las etiquetas relacionadas.
+
+    Comprobaciones de seguridad de URL mejoradas:
+
+    Validar esquema (http / https)
+
+    Bloquear direcciones IP privadas, reservadas, de bucle invertido y multidifusión
+
+    Bloquear dominios localhost
+
+    Enlaces máximos estandarizados por palabra clave a 15 en todas las fuentes.
+
+    El backend impone una lista de palabras clave < = 10 y una longitud de palabra clave <=50 caracteres.
+
+    Se agregaron solicitudes más seguras.Uso de Session () para todas las llamadas API.
+
+    Manejo de errores mejorado para fallas de recuperación (devuelve una lista vacía en lugar de fallar).
+
+    Limitación de llamadas API: 10 solicitudes por minuto por IP de cliente a través de Flask-Limiter.
+
+    La interfaz ahora envía solo parámetros seguros (palabras clave, idioma) y usa Suspenso para componentes cargados de forma diferida.
+
+    Dependencia reducida de la IP para mayor seguridad (más énfasis en la validez de la URL y el análisis seguro).
+
+    Se eliminaron todas las clases CSS / UI de modo agresivo anteriores.
     `,
     changelogButton: "última actualización 📦",
   },
