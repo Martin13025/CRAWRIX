@@ -5,6 +5,15 @@ Commercial use is strictly prohibited without written permission from the author
 
 📧 Email: danpain800@gmail.com
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1aab9d36-e3e9-4559-9fe8-101546436a82" alt="1" width="473" height="129" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/21d36fe3-e882-4f41-abd1-330c693b464d" alt="2" width="701" height="150" />
+</p>
+<hr />
+
 # Changelog 🚀
 
 ## 🪐GRAND UPDATE v3.0.0 – Changes Overview
