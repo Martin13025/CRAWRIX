@@ -16,7 +16,7 @@ Commercial use is strictly prohibited without written permission from the author
 
 # Changelog 🚀
 
-## 🪐GRAND UPDATE v3.0.1 – Changes Overview
+## 🪐GRAND UPDATE v3.0.0 – Changes Overview
 
 ### Removed
 - Aggressive mode from both frontend and backend.
