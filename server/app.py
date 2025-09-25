@@ -132,16 +132,6 @@ def fetch_qwant(keyword):
     except:
         return []
 
-def fetch_hackernews(keyword):
-    url = "https://hn.algolia.com/api/v1/search"
-    params = {"query": keyword, "tags": "story", "hitsPerPage": 15}
-    try:
-        data = session.get(url, params=params, timeout=10).json()
-        links = [item.get("url") for item in data.get("hits", []) if item.get("url") and is_safe_url(item.get("url"))]
-        return links
-    except:
-        return []
-
 def fetch_stackexchange(keyword):
     url = "https://api.stackexchange.com/2.3/search/advanced"
     params = {
@@ -176,12 +166,11 @@ def parse():
         wiki_links = fetch_wikipedia(keyword)
         reddit_links = fetch_reddit(keyword)
         qwant_links = fetch_qwant(keyword)
-        hn_links = fetch_hackernews(keyword)
         se_links = fetch_stackexchange(keyword)
 
         combined_links = list(set(
             bing_links + yahoo_links + duck_links + wiki_links +
-            reddit_links + qwant_links + hn_links + se_links
+            reddit_links + qwant_links + se_links
         ))[:15]
 
         results.append({"keyword": keyword, "links": combined_links})
@@ -190,3 +179,4 @@ def parse():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
+
